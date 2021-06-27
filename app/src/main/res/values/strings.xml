@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DStesing</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="koala_description">The koala or, inaccurately, koala bear, is an arboreal herbivorous marsupial native to Australia. It is the only extant representative of the family Phascolarctidae and its closest living relatives are the wombats, which are members of the family Vombatidae.</string>
+
+</resources>

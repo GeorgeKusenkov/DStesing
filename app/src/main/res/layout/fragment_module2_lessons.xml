@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FragmentThree">
+    tools:context=".fragments.LessonsModule2Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="50sp"
-        android:text="KOALA 1"
+        android:text="Module 2\n List of Lessons"
         android:gravity="center"/>
 
 </FrameLayout>

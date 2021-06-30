@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/module_recycle_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.ModuleFragment">
+    tools:context=".fragments.DetailsFragment"
+    android:id="@+id/fragment_detaley">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/module_recycler_view"
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/module_card"/>
+        android:text="@string/hello_blank_fragment" />
+
 </FrameLayout>

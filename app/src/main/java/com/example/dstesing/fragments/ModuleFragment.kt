@@ -11,33 +11,29 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.Module
 import com.example.dstesing.OnCardClickListener
 import com.example.dstesing.R
-import com.example.dstesing.adapters.RecyclerViewAdapter
+import com.example.dstesing.adapters.RecyclerViewCardAdapter
 
 class ModuleFragment : Fragment(), OnCardClickListener {
 
-    private var titleList = mutableListOf<String>()
-    private var detailsList = mutableListOf<String>()
-    private var imageList = mutableListOf<Int>()
-
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>? = null
+    private var cardAdapter: RecyclerView.Adapter<RecyclerViewCardAdapter.ViewHolder>? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = inflater.inflate(R.layout.fragment_module,container,false)
 
 //Настраиваем Recycler View. Назначаем адаптер, находим список и говорим как мы бдем отображать данные
-        val recyclerView = binding.findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView = binding.findViewById<RecyclerView>(R.id.module_recycler_view)
         layoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = layoutManager
-        adapter = RecyclerViewAdapter(titleList, detailsList, imageList, this)
-        recyclerView.adapter = adapter
+        cardAdapter = RecyclerViewCardAdapter(this)
+        recyclerView.adapter = cardAdapter
 
         return binding
     }
 
     //Функция навигации по RecyclerView
-    override fun itemClick(module: Module, position: Int) {
+    override fun cardClick(module: Module, position: Int) {
         when(position) {
             0 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule1Fragment)
             1 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule2Fragment)

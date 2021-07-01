@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.navigation.fragment.navArgs
 import com.example.dstesing.Lesson
 import com.example.dstesing.OnLessonClickListener
 import com.example.dstesing.R
@@ -14,14 +15,15 @@ import com.example.dstesing.adapters.RecyclerViewLessonAdapter
 
 class DetailsFragment : Fragment()  {
 
-    private var num: Int? = null
+
+    val args: DetailsFragmentArgs by navArgs()
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
 
-        num = arguments?.getInt("POSITION")
+        val num = args.position
 //        Toast.makeText(context,"Position is $num", Toast.LENGTH_SHORT).show()
 
        when (num) {

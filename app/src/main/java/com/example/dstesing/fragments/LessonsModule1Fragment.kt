@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentTransaction
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,15 +39,8 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
     }
 
     override fun lessonClick(lesson: Lesson, position: Int) {
-        var bundle = Bundle()
-        bundle.putInt("POSITION", position)
-
-        var transaction = this.parentFragmentManager.beginTransaction()
-        var fragment = DetailsFragment()
-        fragment.arguments = bundle
-        transaction.replace(R.id.lesson_recycle_layout, fragment).commit()
-
-        findNavController().navigate(R.id.action_lessonsModule1Fragment_to_detailsFragment)
+        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position)
+        findNavController().navigate(action)
 
     }
 }

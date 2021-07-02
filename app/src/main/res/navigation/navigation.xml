@@ -42,12 +42,19 @@
         android:id="@+id/lessonsModule2Fragment"
         android:name="com.example.dstesing.fragments.LessonsModule2Fragment"
         android:label="fragment_four"
-        tools:layout="@layout/fragment_module2_lessons" />
+        tools:layout="@layout/fragment_module2_lessons" >
+        <action
+            android:id="@+id/action_lessonsModule2Fragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.dstesing.fragments.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" >
+        tools:layout="@layout/fragment_module1_lesson1" >
         <argument
             android:name="POSITION"
             app:argType="integer" />

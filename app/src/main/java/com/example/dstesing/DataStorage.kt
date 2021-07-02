@@ -18,11 +18,7 @@ object DataStorage {
             Lesson("Lesson #3", "This is Module #3",R.drawable.coala5),
             Lesson("Lesson #4", "This is Module #4",R.drawable.coala5),
             Lesson("Lesson #5", "This is Module #5",R.drawable.coala5),
-            Lesson("Lesson #5", "This is Module #5",R.drawable.coala5),
-            Lesson("Lesson #5", "This is Module #5",R.drawable.coala5),
-            Lesson("Lesson #5", "This is Module #5",R.drawable.coala5),
-            Lesson("Lesson #5", "This is Module #5",R.drawable.coala5),
-            Lesson("Lesson #5", "This is Module #5",R.drawable.coala5)
+            Lesson("Lesson #5", "This is Module #6",R.drawable.coala5)
         )
     }
 }

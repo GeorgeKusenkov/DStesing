@@ -1,17 +1,10 @@
 package com.example.dstesing.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.Toast
-import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentTransaction
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,7 +22,7 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
                               savedInstanceState: Bundle?): View? {
         val binding = inflater.inflate(R.layout.fragment_module1_lessons, container, false)
 
-        val recyclerView = binding.findViewById<RecyclerView>(R.id.lesson_recycler_view)
+        val recyclerView = binding.findViewById<RecyclerView>(R.id.module1_lessons_recycler_view)
         layoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = layoutManager
         adapter = RecyclerViewLessonAdapter(this)

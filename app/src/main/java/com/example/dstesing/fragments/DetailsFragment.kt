@@ -5,16 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.navigation.fragment.navArgs
-import com.example.dstesing.Lesson
-import com.example.dstesing.OnLessonClickListener
 import com.example.dstesing.R
-import com.example.dstesing.adapters.RecyclerViewLessonAdapter
 
 class DetailsFragment : Fragment()  {
-
 
     val args: DetailsFragmentArgs by navArgs()
 
@@ -24,14 +18,16 @@ class DetailsFragment : Fragment()  {
         ): View? {
 
         val num = args.position
-//        Toast.makeText(context,"Position is $num", Toast.LENGTH_SHORT).show()
 
-       when (num) {
-           0 -> return inflater.inflate(R.layout.fragment_details, container, false)
-           1 -> return inflater.inflate(R.layout.fragment_details2, container, false)
-           2 -> return inflater.inflate(R.layout.fragment_details3, container, false)
+       when (num+1) {
+           1 -> return inflater.inflate(R.layout.fragment_module1_lesson1, container, false)
+           2 -> return inflater.inflate(R.layout.fragment_module1_lesson2, container, false)
+           3 -> return inflater.inflate(R.layout.fragment_module1_lesson3, container, false)
+           4 -> return inflater.inflate(R.layout.fragment_module1_lesson4, container, false)
+           5 -> return inflater.inflate(R.layout.fragment_module1_lesson5, container, false)
+           6 -> return inflater.inflate(R.layout.fragment_module1_lesson6, container, false)
        }
-            return inflater.inflate(R.layout.fragment_details, container, false)
+            return inflater.inflate(R.layout.fragment_module1_lesson1, container, false)
         }
 }
 

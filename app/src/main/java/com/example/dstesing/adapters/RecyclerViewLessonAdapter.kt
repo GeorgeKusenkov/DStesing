@@ -18,9 +18,9 @@ class RecyclerViewLessonAdapter (private val lessonClickListener: OnLessonClickL
         val itemDetails: TextView = itemView.findViewById(R.id.lesson_description)
         val itemImage: ImageView = itemView.findViewById(R.id.lesson_image)
 
-        fun lessonBind(lesson: Lesson, clickListener: OnLessonClickListener) {
+        fun lessonBind(lesson: Lesson, clickListener: OnLessonClickListener, id: String) {
             itemView.setOnClickListener {
-                clickListener.lessonClick(lesson, adapterPosition)
+                clickListener.lessonClick(lesson, adapterPosition, id)
             }
         }
 
@@ -36,8 +36,9 @@ class RecyclerViewLessonAdapter (private val lessonClickListener: OnLessonClickL
         holder.itemTitle.text = lessons[position].title
         holder.itemDetails.text = lessons[position].details
 
+        val id = ""
         val lesson = lessons[position]
-        holder.lessonBind(lesson, lessonClickListener)
+        holder.lessonBind(lesson, lessonClickListener, id)
     }
 
     override fun getItemCount() = lessons.size

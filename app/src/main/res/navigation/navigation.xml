@@ -37,6 +37,9 @@
         <argument
             android:name="POSITION"
             app:argType="integer" />
+        <argument
+            android:name="ID"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/lessonsModule2Fragment"
@@ -49,6 +52,9 @@
         <argument
             android:name="POSITION"
             app:argType="integer" />
+        <argument
+            android:name="ID"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -58,5 +64,8 @@
         <argument
             android:name="POSITION"
             app:argType="integer" />
+        <argument
+            android:name="ID"
+            app:argType="string" />
     </fragment>
 </navigation>

@@ -7,11 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.*
-import com.example.dstesing.fragments.DetailsFragment
 
-class RecyclerViewLessonAdapter (private val lessonClickListener: OnLessonClickListener) : RecyclerView.Adapter<RecyclerViewLessonAdapter.ViewHolder>() {
+class RecyclerViewModule2Adapter (private val lessonClickListener: OnLessonClickListener) : RecyclerView.Adapter<RecyclerViewModule2Adapter.ViewHolder>() {
 
-    private val lessons = DataStorage.getLessonsList()
+    private val lessons = DataStorage.getLessonsModule2List()
 
     inner class ViewHolder(itemView: View) :  RecyclerView.ViewHolder(itemView) {
         val itemTitle: TextView = itemView.findViewById(R.id.lesson_title)
@@ -23,7 +22,6 @@ class RecyclerViewLessonAdapter (private val lessonClickListener: OnLessonClickL
                 clickListener.lessonClick(lesson, adapterPosition, id)
             }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,7 +34,7 @@ class RecyclerViewLessonAdapter (private val lessonClickListener: OnLessonClickL
         holder.itemTitle.text = lessons[position].title
         holder.itemDetails.text = lessons[position].details
 
-        val id = ""
+        val id = lessons[position].id
         val lesson = lessons[position]
         holder.lessonBind(lesson, lessonClickListener, id)
     }

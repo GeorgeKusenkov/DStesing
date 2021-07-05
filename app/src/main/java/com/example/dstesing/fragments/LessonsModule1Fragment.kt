@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.Lesson
 import com.example.dstesing.OnLessonClickListener
 import com.example.dstesing.R
-import com.example.dstesing.adapters.RecyclerViewLessonAdapter
+import com.example.dstesing.adapters.RecyclerViewModule1Adapter
 
 class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
 
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerViewLessonAdapter.ViewHolder>? = null
+    private var adapter: RecyclerView.Adapter<RecyclerViewModule1Adapter.ViewHolder>? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -25,7 +25,7 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module1_lessons_recycler_view)
         layoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = layoutManager
-        adapter = RecyclerViewLessonAdapter(this)
+        adapter = RecyclerViewModule1Adapter(this)
         recyclerView.adapter = adapter
 
         return binding
@@ -34,6 +34,5 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
     override fun lessonClick(lesson: Lesson, position: Int, id: String) {
         val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
         findNavController().navigate(action)
-
     }
 }

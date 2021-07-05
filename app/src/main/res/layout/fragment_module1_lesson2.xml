@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetailsFragment"
+    android:id="@+id/fragment_module1_lesson2">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Module 1 lesson2"
-        android:gravity="center"
-        android:textSize="50sp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_margin="15dp"
+            android:text="Базовый звук - дрон"
+            android:textSize="45sp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="258dp"
+            android:src="@drawable/drone_image"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Этот звук, как правило, либо получается сразу, либо нет. Если звук не получился, то с большой вероятностью по причине того, что Вы «трубили». Или иначе - по причине излишне напряженных губ."
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Надуйте щеки. Не сильно. Чуть сжимая губы. Теперь слегка прижмите губы к мундштуку, немного «вложив» их внутрь трубы. Теперь, не добавляя никаких напряжений в лицевых мышцах, начинайте выдувать воздух, слегка разомкнув губы. Нужно воспроизвести легко и расслабленно звук похожий на звук «Тпр-р-ру», который применяется в процессе управления «одной лошадиной силой»."
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Базовый звук диджериду «дрон» – это результат низкочастотных колебаний губ. Это звук, лишенный какого-либо напряжения со стороны исполнителя. Если звука нет - ищите, где Вы допускаете напряжения. Хотя напряжение также может быть вызвано еще и неоптимальным внутренним диаметром мундштука. Пробуйте поискать свой мундштук."
+            android:textSize="15sp"/>
+    </LinearLayout>
+</ScrollView>

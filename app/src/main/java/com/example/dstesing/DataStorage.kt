@@ -11,6 +11,13 @@ object DataStorage {
         )
     }
 
+    //Basic course Main
+    fun getCourceList(): Array<Lesson> {
+        return arrayOf(
+            Lesson("О диджериду", "Познакомьтесь с инструментом поближе",R.drawable.idge_logo,"M1L-"),
+        )
+    }
+
     //Basic course module 1 lessons
     fun getLessonsModule1List(): Array<Lesson> {
         return arrayOf(

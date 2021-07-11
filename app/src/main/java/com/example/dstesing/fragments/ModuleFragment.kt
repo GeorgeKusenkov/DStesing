@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.Module
 import com.example.dstesing.OnCardClickListener
@@ -31,6 +32,7 @@ class ModuleFragment : Fragment(), OnCardClickListener {
 
         return binding
     }
+
 
     //Функция навигации по RecyclerView
     override fun cardClick(module: Module, position: Int) {

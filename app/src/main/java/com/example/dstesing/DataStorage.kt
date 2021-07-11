@@ -3,18 +3,19 @@ package com.example.dstesing
 object DataStorage {
     fun getModuleList(): Array<Module> {
         return arrayOf(
-            Module("Module #1", "This is Module #1",R.drawable.coala),
-            Module("Module #2", "This is Module #2",R.drawable.coala2),
-            Module("Module #3", "This is Module #3",R.drawable.coala3),
-            Module("Module #4", "This is Module #4",R.drawable.coala4),
-            Module("Module #5", "This is Module #5",R.drawable.coala5)
+            Module("Занятие 1", "This is Module #1",R.drawable.module1atr),
+            Module("Занятие 2", "This is Module #2",R.drawable.module2atr),
+            Module("Занятие 3", "This is Module #3",R.drawable.module3atr),
+            Module("Занятие 4", "This is Module #4",R.drawable.module4atr),
+            Module("Занятие 5", "This is Module #5",R.drawable.module5atr)
         )
     }
 
     //Basic course Main
-    fun getCourceList(): Array<Lesson> {
+    fun getCourseList(): Array<Course> {
         return arrayOf(
-            Lesson("О диджериду", "Познакомьтесь с инструментом поближе",R.drawable.idge_logo,"M1L-"),
+            Course("Базовый курс", "Курс для новичков",R.drawable.austalia_uluru),
+            Course("Диджериду Pro", "Узнай больше", R.drawable.australia_uluru2),
         )
     }
 

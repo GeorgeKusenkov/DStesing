@@ -7,17 +7,155 @@
     tools:context=".fragments.MainFragment"
     android:orientation="vertical">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@color/purple_200"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="25dp">
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chelovek"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Алексей"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_ruka"
+            app:layout_constraintBottom_toBottomOf="@+id/userName"
+            app:layout_constraintStart_toEndOf="@+id/userName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_marginTop="15dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <ImageView
+            android:id="@+id/star_main_fragment"
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Уровень"
+            android:textColor="#FF9800"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/star_main_fragment"
+            app:layout_constraintStart_toEndOf="@+id/star_main_fragment"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/experience_main_fragment"
+            android:layout_marginTop="5dp"
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_ex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/star_main_fragment" />
+
+        <TextView
+            android:id="@+id/experience_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Опыт"
+            android:textColor="#FF9800"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/experience_main_fragment"
+            app:layout_constraintStart_toEndOf="@+id/experience_main_fragment"
+            app:layout_constraintTop_toTopOf="@+id/experience_main_fragment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="340"
+            android:textColor="#FF9800"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/experience_textView"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/experience_textView" />
+
+        <ImageView
+            android:id="@+id/lessons_ico_main_fragment"
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_lessons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experience_main_fragment"/>
+
+        <TextView
+            android:id="@+id/lessons_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Пройдено уроков"
+            android:textColor="#FF9800"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lessons_ico_main_fragment"
+            app:layout_constraintStart_toEndOf="@+id/experience_main_fragment"
+            app:layout_constraintTop_toTopOf="@+id/lessons_ico_main_fragment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3/45"
+            android:textColor="#FF9800"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/lessons_textView"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/lessons_textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/module_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="horizontal"
         app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/course_card"/>
+        tools:listitem="@layout/course_card" />
 
     <Button
         android:id="@+id/button"

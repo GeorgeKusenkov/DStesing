@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -29,6 +30,10 @@ class MainFragment : Fragment(), OnCourseClickListener {
         var binding = inflater.inflate(R.layout.fragment_main,container,false)
 
         val button = binding.findViewById<Button>(R.id.button)
+        val points = binding.findViewById<TextView>(R.id.points_main)
+
+
+
 
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module_recycler_view)
         layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)

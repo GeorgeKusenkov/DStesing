@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_moduleFragment"
             app:destination="@id/moduleFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
     </fragment>
     <fragment
         android:id="@+id/moduleFragment"
@@ -68,4 +71,9 @@
             android:name="ID"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.dstesing.fragments.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

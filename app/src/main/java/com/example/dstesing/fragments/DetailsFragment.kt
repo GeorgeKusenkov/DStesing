@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.DataStorage
 import com.example.dstesing.R
 
@@ -18,6 +21,16 @@ class DetailsFragment : Fragment()  {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
+
+        val binding = inflater.inflate(R.layout.fragment_module1_lesson6, container, false)
+
+
+
+//    if (!scrollView.canScrollVertically(1)) {
+//        Toast.makeText(context, "YEP", Toast.LENGTH_SHORT)
+//    }
+
+
 
         val num = args.position                                                                     //Передаем этому фрагменту аргумент с позицией
         val id = args.id                                                                            //Присваиваем ID элемента в списке
@@ -42,7 +55,9 @@ class DetailsFragment : Fragment()  {
                     "M2L-3" -> return inflater.inflate(R.layout.fragment_module2_lesson3, container, false)
                 }
             }
-            return inflater.inflate(R.layout.fragment_module1_lesson6, container, false)
+
+            return binding
     }
+
 }
 

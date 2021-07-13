@@ -47,7 +47,8 @@ class MainFragment : Fragment(), OnCourseClickListener {
     override fun cardClick(course: Course, position: Int) {
         when(position) {
             0 -> findNavController().navigate(R.id.action_mainFragment_to_moduleFragment)
-            1 -> Toast.makeText(context, "Этот курс пока что не доступен", Toast.LENGTH_LONG).show()
+            1 -> findNavController().navigate(R.id.action_mainFragment_to_infoFragment)
+//            1 -> Toast.makeText(context, "Этот курс пока что не доступен", Toast.LENGTH_LONG).show()
         }
     }
 }

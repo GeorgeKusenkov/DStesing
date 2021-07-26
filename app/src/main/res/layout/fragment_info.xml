@@ -64,7 +64,18 @@
             android:id="@+id/points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Узнать очки"/>
+            android:text="Ввести"/>
+
+        <TextView
+            android:id="@+id/textViewRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+        <EditText
+            android:id="@+id/ed_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Введите что-то"/>
     </LinearLayout>
 
 </ScrollView>

@@ -1,5 +1,7 @@
 package com.example.dstesing.fragments
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,7 +20,7 @@ import com.example.dstesing.adapters.RecyclerViewCourseAdapter
 
 class MainFragment : Fragment(), OnCourseClickListener {
 
-
+    var pref: SharedPreferences? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var cardAdapter: RecyclerView.Adapter<RecyclerViewCourseAdapter.ViewHolder>? = null
 
@@ -31,8 +33,14 @@ class MainFragment : Fragment(), OnCourseClickListener {
 
         val button = binding.findViewById<Button>(R.id.button)
         val points = binding.findViewById<TextView>(R.id.points_main)
+        val userName  = binding.findViewById<TextView>(R.id.userName)
+        pref = context?.getSharedPreferences("TABLE", Context.MODE_PRIVATE)
 
 
+
+        var sharedName = userName.text.toString()
+        sharedName = pref?.getString("counter", "ЧЕЛОВЕК")!!
+        userName.text = sharedName
 
 
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module_recycler_view)
@@ -56,4 +64,5 @@ class MainFragment : Fragment(), OnCourseClickListener {
 //            1 -> Toast.makeText(context, "Этот курс пока что не доступен", Toast.LENGTH_LONG).show()
         }
     }
+
 }

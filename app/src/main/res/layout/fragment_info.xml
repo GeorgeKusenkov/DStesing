@@ -59,23 +59,6 @@
             android:layout_marginBottom="5dp"
             android:text="@string/intro5_c1_m1_l1"
             android:textSize="15sp"/>
-
-        <Button
-            android:id="@+id/points"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ввести"/>
-
-        <TextView
-            android:id="@+id/textViewRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-        <EditText
-            android:id="@+id/ed_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Введите что-то"/>
     </LinearLayout>
 
 </ScrollView>

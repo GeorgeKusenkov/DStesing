@@ -14,21 +14,12 @@ import com.example.dstesing.R
 
 class InfoFragment : Fragment() {
 
-    var counter = ""
-    var pref: SharedPreferences? = null
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,): View? {
 
         val binding = inflater.inflate(R.layout.fragment_info, container, false)
         val scrollView = binding.findViewById<ScrollView>(R.id.fragment_info_layer)
-        val tvText = binding.findViewById<TextView>(R.id.textViewRes)
-        val etText = binding.findViewById<EditText>(R.id.ed_view)
-        pref = context?.getSharedPreferences("TABLE", Context.MODE_PRIVATE)
-        counter = pref?.getString("counter", "ЧЕЛОВЕК")!!
-        tvText.text = counter
 
         val button = binding.findViewById<Button>(R.id.points)
-
 
 //            var check = false
 //            var i = 0
@@ -40,8 +31,7 @@ class InfoFragment : Fragment() {
 //            }
 
         button.setOnClickListener{
-            counter = etText.text.toString()
-            tvText.text = counter
+
         }
 
         return binding
@@ -53,20 +43,4 @@ class InfoFragment : Fragment() {
 //        editor?.apply()
 //    }
 
-    private fun saveData(res: String) {
-        val editor = pref?.edit()
-        editor?.apply{
-            putString("counter", res)
-        }?.apply()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        saveData(counter)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        saveData(counter)
-    }
 }

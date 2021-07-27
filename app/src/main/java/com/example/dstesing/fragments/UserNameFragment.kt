@@ -11,46 +11,49 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.dstesing.R
 
 class UserNameFragment : Fragment() {
 
-    var userName = ""
-    var sharedPreferences: SharedPreferences? = null
+    var counter = ""
+    var pref: SharedPreferences? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val insertedTextField = this.activity?.findViewById<EditText>(R.id.et_user_name)
-        val textField = this.activity?.findViewById<TextView>(R.id.tv_text)
-        textField?.text = insertedTextField?.text.toString()
-        sharedPreferences = context?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        userName = sharedPreferences?.getString("USER_NAME", "ЧЕЛОВЕК")!!
         val binding = inflater.inflate(R.layout.fragment_user_name, container, false)
+        val tvText = binding.findViewById<TextView>(R.id.tv_text)
+        val etText = binding.findViewById<EditText>(R.id.et_user_name)
 
+        pref = context?.getSharedPreferences("TABLE", Context.MODE_PRIVATE)
+        counter = pref?.getString("counter", "ЧЕЛОВЕК1")!!
+        tvText.text = counter
 
         val button = binding.findViewById<Button>(R.id.button2)
-        button.setOnClickListener{
 
+        button.setOnClickListener{
+            counter = etText.text.toString()
+            saveData(counter)
+            findNavController().navigate(R.id.action_userNameFragment_to_mainFragment)
         }
 
         return binding
     }
 
     private fun saveData(res: String) {
-        val editor = sharedPreferences?.edit()
+        val editor = pref?.edit()
         editor?.apply{
-            putString("USER_NAME", res)
+            putString("counter", res)
         }?.apply()
-
     }
 
     override fun onDestroy() {
         super.onDestroy()
         saveData(counter)
     }
-
-
 }

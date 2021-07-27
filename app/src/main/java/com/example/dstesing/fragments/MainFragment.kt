@@ -20,6 +20,7 @@ import com.example.dstesing.adapters.RecyclerViewCourseAdapter
 
 class MainFragment : Fragment(), OnCourseClickListener {
 
+    var sharedName = ""
     var pref: SharedPreferences? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var cardAdapter: RecyclerView.Adapter<RecyclerViewCourseAdapter.ViewHolder>? = null
@@ -34,12 +35,9 @@ class MainFragment : Fragment(), OnCourseClickListener {
         val button = binding.findViewById<Button>(R.id.button)
         val points = binding.findViewById<TextView>(R.id.points_main)
         val userName  = binding.findViewById<TextView>(R.id.userName)
+
         pref = context?.getSharedPreferences("TABLE", Context.MODE_PRIVATE)
-
-
-
-        var sharedName = userName.text.toString()
-        sharedName = pref?.getString("counter", "ЧЕЛОВЕК")!!
+        sharedName = pref?.getString("counter", "ЧЕЛОВЕК3")!!
         userName.text = sharedName
 
 

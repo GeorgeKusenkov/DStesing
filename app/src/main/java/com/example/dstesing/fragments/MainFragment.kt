@@ -9,37 +9,34 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.*
-import com.example.dstesing.adapters.RecyclerViewCardAdapter
 import com.example.dstesing.adapters.RecyclerViewCourseAdapter
 
 class MainFragment : Fragment(), OnCourseClickListener {
 
-    var sharedName = ""
-    var pref: SharedPreferences? = null
+    private var sharedName = ""
+    private var sharedPreferences: SharedPreferences? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var cardAdapter: RecyclerView.Adapter<RecyclerViewCourseAdapter.ViewHolder>? = null
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var binding = inflater.inflate(R.layout.fragment_main,container,false)
+        val binding = inflater.inflate(R.layout.fragment_main,container,false)
 
         val button = binding.findViewById<Button>(R.id.button)
-        val points = binding.findViewById<TextView>(R.id.points_main)
         val userName  = binding.findViewById<TextView>(R.id.userName)
+        val userExperience = binding.findViewById<TextView>(R.id.experience_main)
 
-        pref = context?.getSharedPreferences("TABLE", Context.MODE_PRIVATE)
-        sharedName = pref?.getString("counter", "ЧЕЛОВЕК3")!!
-        userName.text = sharedName
-
+        //Достаём значение из SharedPreferences. Заполняем имя пользователя
+        sharedPreferences = context?.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
+        userName.text = sharedPreferences?.getString("user_name", "Абориген")!!
+        userExperience.text = sharedPreferences?.getInt("user_experience", 0).toString()
 
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module_recycler_view)
         layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
@@ -50,9 +47,8 @@ class MainFragment : Fragment(), OnCourseClickListener {
         button.setOnClickListener{view: View ->
             view.findNavController().navigate(R.id.action_mainFragment_to_moduleFragment)
         }
-        return binding
-        // Inflate the layout for this fragment
 
+        return binding
     }
 
     override fun cardClick(course: Course, position: Int) {

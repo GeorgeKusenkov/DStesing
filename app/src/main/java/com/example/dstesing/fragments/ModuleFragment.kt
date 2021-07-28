@@ -40,6 +40,5 @@ class ModuleFragment : Fragment(), OnCardClickListener {
             0 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule1Fragment)
             1 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule2Fragment)
         }
-//        Toast.makeText(context,"Koala name $position", Toast.LENGTH_SHORT).show()
     }
 }

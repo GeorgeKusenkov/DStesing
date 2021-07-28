@@ -34,7 +34,11 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
     }
 
     override fun lessonClick(lesson: Lesson, position: Int, id: String) {
-        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
-        findNavController().navigate(action)
+        when(position) {
+            0 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson1Fragment)
+            1 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson2Fragment)
+        }
+//        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
+//        findNavController().navigate(action)
     }
 }

@@ -19,7 +19,6 @@ class InfoFragment : Fragment() {
         val binding = inflater.inflate(R.layout.fragment_info, container, false)
         val scrollView = binding.findViewById<ScrollView>(R.id.fragment_info_layer)
 
-
 //            var check = false
 //            var i = 0
 //            scrollView.viewTreeObserver.addOnScrollChangedListener {

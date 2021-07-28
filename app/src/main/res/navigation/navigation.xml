@@ -46,6 +46,12 @@
         <argument
             android:name="ID"
             app:argType="string" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson2Fragment"
+            app:destination="@id/module1Lesson2Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson1Fragment"
+            app:destination="@id/module1Lesson1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/lessonsModule2Fragment"
@@ -92,4 +98,12 @@
             android:id="@+id/action_userNameFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/module1Lesson1Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson1Fragment"
+        android:label="Module1Lesson1Fragment" />
+    <fragment
+        android:id="@+id/module1Lesson2Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson2Fragment"
+        android:label="Module1Lesson2Fragment" />
 </navigation>

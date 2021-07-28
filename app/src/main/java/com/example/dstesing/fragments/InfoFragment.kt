@@ -19,7 +19,6 @@ class InfoFragment : Fragment() {
         val binding = inflater.inflate(R.layout.fragment_info, container, false)
         val scrollView = binding.findViewById<ScrollView>(R.id.fragment_info_layer)
 
-        val button = binding.findViewById<Button>(R.id.points)
 
 //            var check = false
 //            var i = 0
@@ -29,10 +28,6 @@ class InfoFragment : Fragment() {
 //                    check = true
 //                }
 //            }
-
-        button.setOnClickListener{
-
-        }
 
         return binding
     }

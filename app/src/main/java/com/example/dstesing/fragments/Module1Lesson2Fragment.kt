@@ -13,7 +13,7 @@ import com.example.dstesing.R
 
 class Module1Lesson2Fragment : Fragment() {
 
-    private var userExperience = 0
+//    private var userExperience = 0
     private var sharedPreferences: SharedPreferences? = null
 
     override fun onCreateView(
@@ -25,26 +25,29 @@ class Module1Lesson2Fragment : Fragment() {
         val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson2)
 
         sharedPreferences = context?.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
-        userExperience = sharedPreferences?.getInt("user_experience", 0)!!
-        var checkXP = sharedPreferences?.getBoolean("check_xp_m1l2", false)!!
+        var userExperience = sharedPreferences?.getInt("user_experience", 0)!!
+        var checkXP = sharedPreferences?.getBoolean("CHECK_XP_M1L2", false)!!
+        var lessonCounter = sharedPreferences?.getInt("LESSON_COUNTER", 0)!!
 
         scrollView.viewTreeObserver.addOnScrollChangedListener {
             if (!scrollView.canScrollVertically(1) && !checkXP) {
                 userExperience+=100
+                lessonCounter+=1
                 checkXP = true
-                saveData(userExperience, checkXP)
-                Toast.makeText(context, "XP: $userExperience", Toast.LENGTH_SHORT).show()
+                saveData(userExperience, checkXP, lessonCounter)
+                Toast.makeText(context, "XP: $userExperience, Lesson: $lessonCounter", Toast.LENGTH_SHORT).show()
             }
         }
 
         return binding
     }
 
-    private fun saveData(xp: Int, checkXP: Boolean) {
+    private fun saveData(xp: Int, checkXP: Boolean, counter: Int) {
         val editor = sharedPreferences?.edit()
         editor?.apply{
             putInt("user_experience", xp)
-            putBoolean("check_xp_m1l2", checkXP)
+            putBoolean("CHECK_XP_M1L2", checkXP)
+            putInt("LESSON_COUNTER", counter)
         }?.apply()
     }
 }

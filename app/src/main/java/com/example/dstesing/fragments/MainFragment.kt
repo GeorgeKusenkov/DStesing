@@ -18,7 +18,6 @@ import com.example.dstesing.adapters.RecyclerViewCourseAdapter
 
 class MainFragment : Fragment(), OnCourseClickListener {
 
-    private var sharedName = ""
     private var sharedPreferences: SharedPreferences? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var cardAdapter: RecyclerView.Adapter<RecyclerViewCourseAdapter.ViewHolder>? = null
@@ -32,11 +31,27 @@ class MainFragment : Fragment(), OnCourseClickListener {
         val button = binding.findViewById<Button>(R.id.button)
         val userName  = binding.findViewById<TextView>(R.id.userName)
         val userExperience = binding.findViewById<TextView>(R.id.experience_main)
+        val userLevel = binding.findViewById<TextView>(R.id.user_level)
+        val userLessonCounter = binding.findViewById<TextView>(R.id.user_lesson_counter)
 
         //Достаём значение из SharedPreferences. Заполняем имя пользователя
         sharedPreferences = context?.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
         userName.text = sharedPreferences?.getString("user_name", "Абориген")!!
         userExperience.text = sharedPreferences?.getInt("user_experience", 0).toString()
+        userLessonCounter.setText(sharedPreferences?.getInt("LESSON_COUNTER", 0).toString())
+
+        var exp = sharedPreferences?.getInt("user_experience", 0)!!
+
+        when (exp) {
+            in 0..500 -> userLevel.setText("1")
+            in 501..1000 -> userLevel.setText("2")
+            in 1001..1500 -> userLevel.setText("3")
+        }
+
+        var isName = sharedPreferences?.getBoolean("is_name", false)!!
+        if (!isName) {
+            findNavController().navigate(R.id.action_mainFragment_to_userNameFragment)
+        }
 
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module_recycler_view)
         layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)

@@ -20,7 +20,7 @@ class UserNameFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
 
         val binding = inflater.inflate(R.layout.fragment_user_name, container, false)
@@ -31,13 +31,13 @@ class UserNameFragment : Fragment() {
         editName = sharedPreferences?.getString("user_name", "ЧЕЛОВЕК1")!!
 
         //Берем значение из SharePreferences и проверяем вводил ли пользователь имя ранее или нет.
-        isName = sharedPreferences?.getBoolean("is_name", false)!!
-        if(isName) {
-            findNavController().navigate(R.id.action_userNameFragment_to_mainFragment)
-        }
+//        isName = sharedPreferences?.getBoolean("is_name", false)!!
+//        if (isName) {
+//            findNavController().navigate(R.id.action_userNameFragment_to_mainFragment)
+//        }
 
         //При нажатии на кнопку сохраняем имя и передаем в SharePreferences, переходим на главный экран.
-        button.setOnClickListener{
+        button.setOnClickListener {
             editName = etText.text.toString()
             isName = true
             saveData(editName, isName)
@@ -49,7 +49,7 @@ class UserNameFragment : Fragment() {
 
     private fun saveData(userName: String, isName: Boolean) {
         val editor = sharedPreferences?.edit()
-        editor?.apply{
+        editor?.apply {
             putString("user_name", userName)
             putBoolean("is_name", isName)
         }?.apply()

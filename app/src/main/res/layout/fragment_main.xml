@@ -73,9 +73,9 @@
             app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
         <TextView
+            android:id="@+id/user_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
             android:textStyle="bold"
             android:textColor="#FF9800"
             android:textSize="20sp"
@@ -138,14 +138,27 @@
             app:layout_constraintTop_toTopOf="@+id/lessons_ico_main_fragment" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3/45"
+            android:text="/45"
             android:textColor="#FF9800"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/lessons_textView"
             app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/lessons_textView" />
+
+        <TextView
+            android:id="@+id/user_lesson_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="#FF9800"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/lessons_textView"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/lessons_textView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

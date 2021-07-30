@@ -40,12 +40,20 @@ class MainFragment : Fragment(), OnCourseClickListener {
         userExperience.text = sharedPreferences?.getInt("user_experience", 0).toString()
         userLessonCounter.setText(sharedPreferences?.getInt("LESSON_COUNTER", 0).toString())
 
-        var exp = sharedPreferences?.getInt("user_experience", 0)!!
+        val exp = sharedPreferences?.getInt("user_experience", 0)!!
 
         when (exp) {
             in 0..500 -> userLevel.setText("1")
             in 501..1000 -> userLevel.setText("2")
             in 1001..1500 -> userLevel.setText("3")
+            in 1501..2000 -> userLevel.setText("4")
+            in 2001..2500 -> userLevel.setText("5")
+            in 2501..3000 -> userLevel.setText("6")
+            in 3001..3500 -> userLevel.setText("7")
+            in 3501..4000 -> userLevel.setText("8")
+            in 4001..4500 -> userLevel.setText("9")
+            in 4501..5000 -> userLevel.setText("10")
+            else -> userLevel.setText("11")
         }
 
         var isName = sharedPreferences?.getBoolean("is_name", false)!!

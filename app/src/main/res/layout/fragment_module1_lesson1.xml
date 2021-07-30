@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.DetailsFragment"
-    android:id="@+id/fragment_module1_lesson1">
+    tools:context=".fragments.Module1Lesson1Fragment">
+
+    <ScrollView
+        android:background="#F6753E"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_module1_lesson1">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
             android:orientation="vertical">
@@ -15,48 +21,77 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:layout_margin="15dp"
-                android:text="@string/intro1_c1_m1_l1"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="Урок 1"
                 android:textSize="45sp"/>
 
-            <TextView
+            <LinearLayout
+                android:background="@drawable/linear_layout_radius"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/intro2_c1_m1_l1"
-                android:textSize="15sp"/>
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="15dp"
+                    android:text="@string/intro1_c1_m1_l1"
+                    android:textSize="45sp"
+                    />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/intro3_c1_m1_l1"
-                android:textSize="15sp"/>
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro2_c1_m1_l1"
+                    android:textSize="20sp"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/aborigans2"/>
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro3_c1_m1_l1"
+                    android:textSize="20sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/intro4_c1_m1_l1"
-                android:textSize="15sp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="265dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/aborigans2"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/intro5_c1_m1_l1"
-                android:textSize="15sp"/>
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro4_c1_m1_l1"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro5_c1_m1_l1"
+                    android:textSize="20sp"/>
+            </LinearLayout>
         </LinearLayout>
 </ScrollView>
+</LinearLayout>

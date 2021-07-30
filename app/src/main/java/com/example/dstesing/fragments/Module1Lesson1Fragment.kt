@@ -29,6 +29,8 @@ class Module1Lesson1Fragment : Fragment() {
         var checkXP = sharedPreferences?.getBoolean("CHECK_XP_M1L1", false)!!
         var lessonCounter = sharedPreferences?.getInt("LESSON_COUNTER", 0)!!
 
+        binding.setBackgroundResource(R.drawable.linear_layout_radius)
+
         scrollView.viewTreeObserver.addOnScrollChangedListener {
             if (!scrollView.canScrollVertically(1) && !checkXP) {
                 userExperience+=450

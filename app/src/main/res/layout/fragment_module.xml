@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/module_recycle_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.ModuleFragment">
+    tools:context=".fragments.ModuleFragment"
+    android:overScrollMode="never">
 
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp"
         android:text="Урок 1"
         android:textSize="45sp"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="100dp"
         android:id="@+id/module_recycler_view"
@@ -24,3 +25,5 @@
         app:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/module_card" />
 </FrameLayout>
+
+</androidx.core.widget.NestedScrollView>

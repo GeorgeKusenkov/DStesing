@@ -10,15 +10,34 @@
 
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+    android:layout_height="match_parent"
+    android:background="#EA926C">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Урок 1"
-        android:textSize="45sp"/>
+        android:orientation="vertical">
+        <TextView
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Базовый курс"
+            android:textSize="45sp"
+            android:textColor="#7D3F3F"/>
+
+        <TextView
+            android:layout_margin="10sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="На этом курсе вы научитесь извлекать первый звук, играть ритмами и изучите основы циркулярного дыхания."
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="200dp"
         android:id="@+id/module_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

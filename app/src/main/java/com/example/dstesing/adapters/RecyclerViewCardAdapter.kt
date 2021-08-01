@@ -13,7 +13,7 @@ class RecyclerViewCardAdapter(private val cardClickListener: OnCardClickListener
         private val modules = DataStorage.getModuleList()
 
             inner class ViewHolder(itemView: View) :  RecyclerView.ViewHolder(itemView) {
-                val itemTitle: TextView = itemView.findViewById(R.id.module_title)
+                val itemTitle: TextView = itemView.findViewById(R.id.lesson_title)
                 val itemDetails: TextView = itemView.findViewById(R.id.module_description)
                 val itemImage: ImageView = itemView.findViewById(R.id.module_image)
 

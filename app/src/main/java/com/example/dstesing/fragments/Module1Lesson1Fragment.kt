@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dstesing.R
 
 class Module1Lesson1Fragment : Fragment() {
@@ -16,10 +17,12 @@ class Module1Lesson1Fragment : Fragment() {
 //    private var userExperience = 0
     private var sharedPreferences: SharedPreferences? = null
 
-    override fun onCreateView(
+      override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
 
         val binding = inflater.inflate(R.layout.fragment_module1_lesson1, container, false)
         val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson1)
@@ -50,6 +53,21 @@ class Module1Lesson1Fragment : Fragment() {
             putBoolean("CHECK_XP_M1L1", checkXP)
             putInt("LESSON_COUNTER", counter)
         }?.apply()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity).supportActionBar!!.show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
     }
 
 }

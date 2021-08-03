@@ -1,67 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Module1Lesson2Fragment"
-    android:id="@+id/fragment_module1_lesson2">
-    <LinearLayout
+    tools:context=".fragments.Module1Lesson2Fragment">
+
+    <ScrollView
+        android:background="#EA926C"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_margin="15dp"
-            android:text="@string/about_didge_c1_m1_l2"
-            android:textSize="45sp"/>
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_module1_lesson2">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dige_image"/>
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/about_didge1_c1_m1_l2"
-            android:textSize="15sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Урок 2"
+                android:textAlignment="center"
+                android:textSize="45sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/about_didge2_c1_m1_l2"
-            android:textSize="15sp"/>
+            <LinearLayout
+                android:background="@drawable/linear_layout_radius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/aborigans2"/>
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#ffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Теория"
+                    android:textSize="15sp"
+                    android:background="@drawable/category_label"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/about_didge3_c1_m1_l2"
-            android:textSize="15sp"/>
+                <TextView
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro1_c1_m1_l1"
+                    android:textSize="30sp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/about_didge4_c1_m1_l2"
-            android:textSize="15sp"/>
-    </LinearLayout>
-</ScrollView>
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro2_c1_m1_l1"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro3_c1_m1_l1"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="265dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/aborigans2"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro4_c1_m1_l1"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/intro5_c1_m1_l1"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.dstesing.fragments.MainFragment"
-        android:label="Школа Диджериду"
+        android:label="Main Fragment"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_moduleFragment"
@@ -26,6 +26,7 @@
     <fragment
         android:id="@+id/moduleFragment"
         android:name="com.example.dstesing.fragments.ModuleFragment"
+        android:label="Module List"
         tools:layout="@layout/fragment_module">
         <action
             android:id="@+id/action_moduleFragment_to_LessonsModule1Fragment"
@@ -37,27 +38,29 @@
     <fragment
         android:id="@+id/lessonsModule1Fragment"
         android:name="com.example.dstesing.fragments.LessonsModule1Fragment"
-        tools:layout="@layout/fragment_module1_lessons">
+        android:label="Lessons Module 1"
+        tools:layout="@layout/fragment_module1_lessons" >
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
-        <argument
-            android:name="ID"
-            app:argType="string" />
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson2Fragment"
             app:destination="@id/module1Lesson2Fragment" />
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson1Fragment"
             app:destination="@id/module1Lesson1Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson3Fragment"
+            app:destination="@id/module1Lesson3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/lessonsModule2Fragment"
         android:name="com.example.dstesing.fragments.LessonsModule2Fragment"
-        tools:layout="@layout/fragment_module2_lessons">
+        android:label="fragment_four"
+        tools:layout="@layout/fragment_module2_lessons" >
         <action
             android:id="@+id/action_lessonsModule2Fragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -76,9 +79,6 @@
         <argument
             android:name="POSITION"
             app:argType="integer" />
-        <argument
-            android:name="ID"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
@@ -100,9 +100,26 @@
     </fragment>
     <fragment
         android:id="@+id/module1Lesson1Fragment"
-        android:name="com.example.dstesing.fragments.Module1Lesson1Fragment" />
+        android:name="com.example.dstesing.fragments.Module1Lesson1Fragment"
+        android:label="Module1Lesson1Fragment" >
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/module1Lesson2Fragment"
         android:name="com.example.dstesing.fragments.Module1Lesson2Fragment"
-        android:label="Module1Lesson2Fragment" />
+        android:label="Module1Lesson2Fragment" >
+        <argument android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson3Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson3Fragment"
+        android:label="fragment_module1_lesson3"
+        tools:layout="@layout/fragment_module1_lesson3" >
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
 </navigation>

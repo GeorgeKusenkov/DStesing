@@ -19,7 +19,7 @@ class RecyclerViewModule2Adapter (private val lessonClickListener: OnLessonClick
 
         fun lessonBind(lesson: Lesson, clickListener: OnLessonClickListener, id: String) {
             itemView.setOnClickListener {
-                clickListener.lessonClick(lesson, adapterPosition, id)
+                clickListener.lessonClick(lesson, adapterPosition)
             }
         }
     }

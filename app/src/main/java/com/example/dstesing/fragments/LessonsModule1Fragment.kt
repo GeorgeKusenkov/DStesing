@@ -33,12 +33,32 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
         return binding
     }
 
-    override fun lessonClick(lesson: Lesson, position: Int, id: String) {
-        when(position) {
-            0 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson1Fragment)
-            1 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson2Fragment)
-        }
+    override fun lessonClick(lesson: Lesson, position: Int) {
+//        when(position) {
+//            0 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson1Fragment)
+//            1 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson2Fragment)
+//        }
+
 //        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
 //        findNavController().navigate(action)
+
+
+        when (position) {
+            0 -> {
+                val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson1Fragment(position)
+                findNavController().navigate(action)
+            }
+
+            1 -> {
+                val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson2Fragment(position)
+                findNavController().navigate(action)
+            }
+
+            2 -> {
+                val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                findNavController().navigate(action)
+            }
+        }
+
     }
 }

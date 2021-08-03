@@ -1,53 +1,29 @@
 package com.example.dstesing.fragments
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ScrollView
-import android.widget.Toast
+import androidx.navigation.fragment.navArgs
 import com.example.dstesing.R
+import com.example.dstesing.Saver
 
 class Module1Lesson2Fragment : Fragment() {
 
-//    private var userExperience = 0
-    private var sharedPreferences: SharedPreferences? = null
+    private val args: DetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val binding = inflater.inflate(R.layout.fragment_module1_lesson2, container, false)
         val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson2)
+        val position = args.position+1
+        binding.setBackgroundResource(R.drawable.linear_layout_radius)
 
-        sharedPreferences = context?.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
-        var userExperience = sharedPreferences?.getInt("user_experience", 0)!!
-        var checkXP = sharedPreferences?.getBoolean("CHECK_XP_M1L2", false)!!
-        var lessonCounter = sharedPreferences?.getInt("LESSON_COUNTER", 0)!!
-
-        scrollView.viewTreeObserver.addOnScrollChangedListener {
-            if (!scrollView.canScrollVertically(1) && !checkXP) {
-                userExperience+=100
-                lessonCounter+=1
-                checkXP = true
-                saveData(userExperience, checkXP, lessonCounter)
-                Toast.makeText(context, "XP: $userExperience, Lesson: $lessonCounter", Toast.LENGTH_SHORT).show()
-            }
-        }
-
+        Saver(position, scrollView, requireContext()).getPoints()
         return binding
-    }
-
-    private fun saveData(xp: Int, checkXP: Boolean, counter: Int) {
-        val editor = sharedPreferences?.edit()
-        editor?.apply{
-            putInt("user_experience", xp)
-            putBoolean("CHECK_XP_M1L2", checkXP)
-            putInt("LESSON_COUNTER", counter)
-        }?.apply()
     }
 }

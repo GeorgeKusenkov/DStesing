@@ -32,7 +32,7 @@ class RecyclerViewModule1Adapter (private val lessonClickListener: OnLessonClick
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemImage.setImageResource(lessons[position].images)
-        holder.itemTitle.text = lessons[position].title
+        holder.itemTitle.setText(lessons[position].title)
         holder.itemDetails.text = lessons[position].details
 
         val id = lessons[position].id

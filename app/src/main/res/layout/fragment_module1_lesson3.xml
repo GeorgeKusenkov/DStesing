@@ -24,7 +24,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="Урок 3"
+                android:text="@string/lesson3"
                 android:textAlignment="center"
                 android:textSize="45sp" />
 
@@ -59,53 +59,7 @@
                     android:text="@string/intro1_c1_m1_l1"
                     android:textSize="30sp"/>
 
-                <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textColor="#7D3F3F"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/intro2_c1_m1_l1"
-                    android:textSize="20sp"/>
 
-                <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textColor="#7D3F3F"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/intro3_c1_m1_l1"
-                    android:textSize="20sp"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="265dp"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:src="@drawable/aborigans2"/>
-
-                <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textColor="#7D3F3F"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/intro4_c1_m1_l1"
-                    android:textSize="20sp"/>
-
-                <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:textColor="#7D3F3F"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/intro5_c1_m1_l1"
-                    android:textSize="20sp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

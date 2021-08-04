@@ -3,6 +3,30 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="koala_description">The koala or, inaccurately</string>
 
+
+    <!--Массив уроков-->
+    <string name="lesson1">Урок 1</string>
+    <string name="lesson2">Урок 2</string>
+    <string name="lesson3">Урок 3</string>
+    <string name="lesson4">Урок 4</string>
+    <string name="lesson5">Урок 5</string>
+    <string name="lesson6">Урок 6</string>
+    <string name="lesson7">Урок 7</string>
+    <string name="lesson8">Урок 8</string>
+    <string name="lesson9">Урок 9</string>
+    <string name="lesson10">Урок 10</string>
+    <string name="lesson11">Урок 11</string>
+    <string name="lesson12">Урок 12</string>
+    <string name="lesson13">Урок 13</string>
+    <string name="lesson14">Урок 14</string>
+    <string name="lesson15">Урок 15</string>
+    <string name="lesson16">Урок 16</string>
+    <string name="lesson17">Урок 17</string>
+    <string name="lesson18">Урок 18</string>
+    <string name="lesson19">Урок 19</string>
+    <string name="lesson20">Урок 20</string>
+
+
     <!--Базовый курс, модуль №1, урок №1-->
     <string name="intro1_c1_m1_l1">Введение</string>
     <string name="intro2_c1_m1_l1">Didgeridoo (yidaki) - древний ритуально-трансовый (сакральный) музыкальный инструмент австралийских аборигенов. Изготавливается из стволов эвкалиптовых деревьев, которые изнутри выедаются термитами.</string>

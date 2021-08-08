@@ -21,11 +21,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
             android:id="@+id/lesson_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/category_label"
             android:fontFamily="@font/montserrat_bold"
             android:paddingStart="15dp"
@@ -39,13 +39,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:fontFamily="@font/montserrat_regular"
-            android:layout_marginTop="20dp"
             android:id="@+id/module_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="This is description module one"
+            android:layout_width="210dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="This is description module one."
             android:textColor="#7D3F3F"
             app:layout_constraintStart_toStartOf="@+id/lesson_title"
             app:layout_constraintTop_toBottomOf="@+id/lesson_title" />
@@ -81,7 +80,6 @@
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="@+id/textView4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.cardview.widget.CardView>

@@ -3,7 +3,7 @@ package com.example.dstesing
 object DataStorage {
     fun getModuleList(): Array<Module> {
         return arrayOf(
-            Module("Занятие 1", "This is Module #1",R.drawable.bear),
+            Module("Занятие 1", "Окунитесь с головой в основы звукоизвлечения",R.drawable.bear),
             Module("Занятие 2", "This is Module #2",R.drawable.elephant),
             Module("Занятие 3", "This is Module #3",R.drawable.wild_boar),
             Module("Занятие 4", "This is Module #4",R.drawable.hedgehog),

@@ -42,7 +42,6 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
 //        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
 //        findNavController().navigate(action)
 
-
         when (position) {
             0 -> {
                 val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson1Fragment(position)

@@ -23,7 +23,7 @@ class Saver(var position: Int, var scrollView: ScrollView, var context: Context)
     fun getPoints () {
         scrollView.viewTreeObserver.addOnScrollChangedListener {
             if (!scrollView.canScrollVertically(1) && !checkXP) {
-                xp+=450
+                xp+=101
                 counter+=1
                 checkXP = true
                 saveData()

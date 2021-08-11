@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dstesing.*
 
@@ -18,24 +18,23 @@ class RecyclerViewModule1Adapter (private val lessonClickListener: OnLessonClick
         val itemDetails: TextView = itemView.findViewById(R.id.lesson_description)
         val itemImage: ImageView = itemView.findViewById(R.id.lesson_image)
 
-
-
         fun lessonBind(lesson: Lesson, clickListener: OnLessonClickListener, id: String) {
             itemView.setOnClickListener {
                 clickListener.lessonClick(lesson, adapterPosition)
             }
-
-
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.lesson_card, parent, false)
+        TakeALevel(parent.context).changeImage(lessons)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TakeALevel().changeImage(lessons)
+
+
+
         holder.itemImage.setImageResource(lessons[position].images)
         holder.itemTitle.setText(lessons[position].title)
         holder.itemDetails.text = lessons[position].details

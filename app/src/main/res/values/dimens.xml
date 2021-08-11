@@ -2,4 +2,5 @@
 <resources>
     <dimen name="lesson_title_size">30sp</dimen>
     <dimen name="lesson_text">15sp</dimen>
+    <dimen name="protagonist_replicas_text_size">18sp</dimen>
 </resources>

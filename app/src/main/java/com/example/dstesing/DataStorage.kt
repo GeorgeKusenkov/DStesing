@@ -22,22 +22,22 @@ object DataStorage {
     //Basic course module 1 lessons
     fun getLessonsModule1List(): Array<Lesson> {
         return arrayOf(
-            Lesson(R.string.lesson1, "Введение",R.drawable.file_58980647,"M1L-"),
-            Lesson(R.string.lesson2, "О диджериду",R.drawable.file_58980648,"M1L-"),
-            Lesson(R.string.lesson3, "Как выбрать диджериду?",R.drawable.file_58980649,"M1L-"),
-            Lesson(R.string.lesson4, "Подготовительные упражнения ч.1",R.drawable.file_58980650,"M1L-"),
-            Lesson(R.string.lesson5, "Подготовительные упражнения ч.2",R.drawable.file_58980651,"M1L-"),
-            Lesson(R.string.lesson6, "Базовый звук - дрон",R.drawable.file_58980652,"M1L-"),
-            Lesson(R.string.lesson7, "Базовый звук - дрон",R.drawable.file_58980653,"M1L-"),
-            Lesson(R.string.lesson8, "Задание 1",R.drawable.file_58980654,"M1L-"),
-            Lesson(R.string.lesson9, "Обертоны и гармоники",R.drawable.file_58980655,"M1L-"),
-            Lesson(R.string.lesson10, "Обертоны и гармоники",R.drawable.file_58980656,"M1L-"),
-            Lesson(R.string.lesson11, "Задание 2",R.drawable.file_58980657,"M1L-"),
-            Lesson(R.string.lesson12, "Уход за диджериду",R.drawable.file_58980657,"M1L-"),
-            Lesson(R.string.lesson13, "Виды диджериду",R.drawable.file_58980658,"M1L-"),
-            Lesson(R.string.lesson14, "Где купить диджериду?",R.drawable.file_58980659,"M1L-"),
-            Lesson(R.string.lesson15, "Диджериду-музыка, которую вы просто обязаны послушать ч.1 ",R.drawable.file_58980660,"M1L-"),
-            Lesson(R.string.lesson16, "Заключение ",R.drawable.file_58980661,"M1L-"),
+            Lesson(R.string.lesson1, "Введение",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson2, "О диджериду",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson3, "Как выбрать диджериду?",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson4, "Подготовительные упражнения ч.1",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson5, "Подготовительные упражнения ч.2",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson6, "Базовый звук - дрон",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson7, "Базовый звук - дрон",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson8, "Задание 1",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson9, "Обертоны и гармоники",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson10, "Обертоны и гармоники",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson11, "Задание 2",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson12, "Уход за диджериду",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson13, "Виды диджериду",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson14, "Где купить диджериду?",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson15, "Диджериду-музыка, которую вы просто обязаны послушать ч.1 ",R.drawable.ic_lesson_lock,"M1L-"),
+            Lesson(R.string.lesson16, "Заключение ",R.drawable.ic_lesson_lock,"M1L-"),
         )
     }
 

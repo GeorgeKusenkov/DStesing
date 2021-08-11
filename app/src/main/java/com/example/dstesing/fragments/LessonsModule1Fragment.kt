@@ -42,21 +42,40 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
 //        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
 //        findNavController().navigate(action)
 
-        when (position) {
-            0 -> {
+
+        val xp = 101
+
+        when  {
+            position == 0 && xp > 0 -> {
                 val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson1Fragment(position)
                 findNavController().navigate(action)
             }
 
-            1 -> {
+            position == 1 && xp>100 -> {
                 val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson2Fragment(position)
                 findNavController().navigate(action)
             }
 
-            2 -> {
+            position == 2 && xp>100 -> {
                 val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                 findNavController().navigate(action)
             }
+
+            position == 3 && xp>200 -> {
+                val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                findNavController().navigate(action)
+            }
+
+            position == 4 && xp>200 -> {
+                val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                findNavController().navigate(action)
+            }
+
+            position == 5 && xp>200 -> {
+                val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                findNavController().navigate(action)
+            }
+            else -> Toast.makeText(context, "Не хватает опыта", Toast.LENGTH_SHORT).show()
         }
 
     }

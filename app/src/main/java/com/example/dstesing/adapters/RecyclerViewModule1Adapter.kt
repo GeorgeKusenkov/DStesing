@@ -24,6 +24,8 @@ class RecyclerViewModule1Adapter (private val lessonClickListener: OnLessonClick
             itemView.setOnClickListener {
                 clickListener.lessonClick(lesson, adapterPosition)
             }
+
+
         }
     }
 
@@ -33,55 +35,7 @@ class RecyclerViewModule1Adapter (private val lessonClickListener: OnLessonClick
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-
-        val xp = 150
-//        when(xp) {
-//            in 1..100 -> lessons[0].images = R.drawable.elephant
-//            in 101..200 -> {
-//                lessons[0].images = R.drawable.elephant
-//                lessons[1].images = R.drawable.wild_boar
-//            }
-//            in 201..300 -> {
-//                lessons[0].images = R.drawable.elephant
-//                lessons[1].images = R.drawable.wild_boar
-//                lessons[2].images = R.drawable.hedgehog
-//            }
-//            in 301..400 -> {
-//                lessons[0].images = R.drawable.elephant
-//                lessons[1].images = R.drawable.wild_boar
-//                lessons[2].images = R.drawable.hedgehog
-//                lessons[3].images = R.drawable.bison
-//            }
-//        }
-
-//        when {
-//           xp > 20 -> lessons[0].images = R.drawable.elephant
-//           xp > 40 -> {
-//                lessons[1].images = R.drawable.wild_boar
-//            }
-//           xp > 50 -> {
-//                lessons[2].images = R.drawable.hedgehog
-//            }
-//           xp > 60 -> {
-//                lessons[3].images = R.drawable.bison
-//            }
-//        }
-
-        if (xp > 20) {
-            lessons[0].images = R.drawable.elephant
-        }
-
-        if (xp > 40) {
-            lessons[1].images = R.drawable.wild_boar
-        }
-        if (xp > 60) {
-            lessons[2].images = R.drawable.hedgehog
-        }
-        if (xp > 80) {
-            lessons[3].images = R.drawable.bison
-        }
-
+        TakeALevel().changeImage(lessons)
         holder.itemImage.setImageResource(lessons[position].images)
         holder.itemTitle.setText(lessons[position].title)
         holder.itemDetails.text = lessons[position].details

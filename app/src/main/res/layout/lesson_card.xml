@@ -40,7 +40,7 @@
                 android:id="@+id/lesson_image"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
-                android:src="@drawable/file_58980647"
+                android:src="@drawable/ic_lesson_lock"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
             android:orientation="vertical">
@@ -47,7 +47,7 @@
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:text="Теория"
+                    android:text="@string/tag_lesson_practice"
                     android:textSize="15sp"
                     android:background="@drawable/category_label"/>
 
@@ -56,9 +56,180 @@
                     android:textColor="#7D3F3F"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/intro1_c1_m1_l1"
+                    android:text="@string/lesson3_title1"
                     android:textSize="30sp"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text1_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:textColor="@color/shaman_replicas"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text2_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:textColor="@color/protagonist_replicas"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text3_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:textColor="@color/shaman_replicas"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lesson3_title2"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/text4_c1_m1_l3"
+                    android:textSize="@dimen/lesson_text_size" />
+
+                <TextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lesson3_title3"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text5_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lesson3_title4"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text6_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lesson3_title5"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text7_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lesson3_title6"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text8_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lesson3_title7"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text9_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text10_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:textColor="@color/protagonist_replicas"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text11_c1_m1_l3"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:textColor="@color/shaman_replicas"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_next_lesson"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"/>
 
             </LinearLayout>
         </LinearLayout>

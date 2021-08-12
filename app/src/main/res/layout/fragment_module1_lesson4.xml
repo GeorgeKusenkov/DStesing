@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/beginpt_one1_c1_m1_l4"
+
             android:textSize="@dimen/lesson_text"/>
 
         <TextView

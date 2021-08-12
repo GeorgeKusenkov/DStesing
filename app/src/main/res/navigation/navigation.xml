@@ -45,14 +45,14 @@
             android:name="POSITION"
             app:argType="integer" />
         <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson3Fragment"
+            app:destination="@id/module1Lesson3Fragment" />
+        <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson2Fragment"
             app:destination="@id/module1Lesson2Fragment" />
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson1Fragment"
             app:destination="@id/module1Lesson1Fragment" />
-        <action
-            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson3Fragment"
-            app:destination="@id/module1Lesson3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/lessonsModule2Fragment"
@@ -94,25 +94,32 @@
             app:destination="@id/mainFragment" />
     </fragment>
     <fragment
-        android:id="@+id/module1Lesson1Fragment"
-        android:name="com.example.dstesing.fragments.Module1Lesson1Fragment">
-        <argument
-            android:name="POSITION"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/module1Lesson2Fragment"
-        android:name="com.example.dstesing.fragments.Module1Lesson2Fragment">
-        <argument
-            android:name="POSITION"
-            app:argType="integer" />
-    </fragment>
-    <fragment
         android:id="@+id/module1Lesson3Fragment"
         android:name="com.example.dstesing.fragments.Module1Lesson3Fragment"
         tools:layout="@layout/fragment_module1_lesson3">
         <argument
             android:name="POSITION"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson2Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson2Fragment"
+        android:label="fragment_module1_lesson2"
+        tools:layout="@layout/fragment_module1_lesson2" >
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson1Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson1Fragment"
+        android:label="fragment_module1_lesson1"
+        tools:layout="@layout/fragment_module1_lesson1" >
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_module1Lesson1Fragment_to_module1Lesson2Fragment2"
+            app:destination="@id/module1Lesson2Fragment" />
     </fragment>
 </navigation>

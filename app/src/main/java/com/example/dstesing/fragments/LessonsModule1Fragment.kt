@@ -54,32 +54,31 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
         if (userXp != null) {
             when  {
                 position == 0 && userXp > LevelGradation.LEVEL_0.xp -> {
-
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson1Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 1 && userXp > LevelGradation.LEVEL_1.xp -> {
+                position == 1 && userXp >= LevelGradation.LEVEL_1.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson2Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 2 && userXp > LevelGradation.LEVEL_1.xp -> {
+                position == 2 && userXp >= LevelGradation.LEVEL_1.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 3 && userXp > LevelGradation.LEVEL_2.xp -> {
+                position == 3 && userXp >= LevelGradation.LEVEL_2.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 4 && userXp > LevelGradation.LEVEL_2.xp -> {
+                position == 4 && userXp >= LevelGradation.LEVEL_3.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 5 && userXp > LevelGradation.LEVEL_2.xp -> {
+                position == 5 && userXp >= LevelGradation.LEVEL_4.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }

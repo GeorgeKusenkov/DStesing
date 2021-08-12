@@ -23,11 +23,11 @@ class Saver(var position: Int, var scrollView: ScrollView, var context: Context)
     fun getPoints () {
         scrollView.viewTreeObserver.addOnScrollChangedListener {
             if (!scrollView.canScrollVertically(1) && !checkXP) {
-                xp+=101
+                xp+=100
                 counter+=1
                 checkXP = true
                 saveData()
-                Toast.makeText(context, "XP: $xp, Lesson: $counter", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Вы получили $xp очков опыта", Toast.LENGTH_SHORT).show()
             }
         }
     }

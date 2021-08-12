@@ -12,7 +12,6 @@ import com.example.dstesing.Saver
 
 class Module1Lesson3Fragment : Fragment() {
 
-
     private val args: DetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -26,6 +25,5 @@ class Module1Lesson3Fragment : Fragment() {
 
         Saver(position, scrollView, requireContext()).getPoints()
         return binding
-
     }
 }

@@ -42,7 +42,6 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
         sharedPreferences = context?.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
         val userXp = sharedPreferences?.getInt("user_experience", 0)
 
-
 //        when(position) {
 //            0 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson1Fragment)
 //            1 -> findNavController().navigate(R.id.action_lessonsModule1Fragment_to_module1Lesson2Fragment)
@@ -63,22 +62,22 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
                     findNavController().navigate(action)
                 }
 
-                position == 2 && userXp >= LevelGradation.LEVEL_1.xp -> {
+                position == 2 && userXp >= LevelGradation.LEVEL_2.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 3 && userXp >= LevelGradation.LEVEL_2.xp -> {
+                position == 3 && userXp >= LevelGradation.LEVEL_3.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 4 && userXp >= LevelGradation.LEVEL_3.xp -> {
+                position == 4 && userXp >= LevelGradation.LEVEL_4.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }
 
-                position == 5 && userXp >= LevelGradation.LEVEL_4.xp -> {
+                position == 5 && userXp >= LevelGradation.LEVEL_5.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
                     findNavController().navigate(action)
                 }

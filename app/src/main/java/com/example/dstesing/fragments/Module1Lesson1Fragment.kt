@@ -30,9 +30,16 @@ class Module1Lesson1Fragment : Fragment() {
         val position = args.position+1
         binding.setBackgroundResource(R.drawable.linear_layout_radius)
 
-        button.setOnClickListener{view: View ->
-            view.findNavController().navigate(R.id.action_module1Lesson1Fragment_to_module1Lesson2Fragment2)
+
+        button.setOnClickListener{
+            val action = Module1Lesson1FragmentDirections.actionModule1Lesson1FragmentToModule1Lesson2Fragment2(position)
+            findNavController().navigate(action)
         }
+
+
+//        button.setOnClickListener{view: View ->
+//            view.findNavController().navigate(R.id.action_module1Lesson1Fragment_to_module1Lesson2Fragment2)
+//        }
 
         Saver(position, scrollView, requireContext()).getPoints()
         return binding

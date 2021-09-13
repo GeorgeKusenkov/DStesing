@@ -30,7 +30,6 @@ class Module1Lesson1Fragment : Fragment() {
         val position = args.position+1
         binding.setBackgroundResource(R.drawable.linear_layout_radius)
 
-
         button.setOnClickListener{
             val action = Module1Lesson1FragmentDirections.actionModule1Lesson1FragmentToModule1Lesson2Fragment2(position)
             findNavController().navigate(action)

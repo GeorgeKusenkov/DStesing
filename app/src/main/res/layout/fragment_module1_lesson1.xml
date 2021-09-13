@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,8 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_margin="@dimen/lesson_text_margin"
             android:orientation="vertical">
 
             <TextView
@@ -28,186 +28,481 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="40dp"/>
 
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#ffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/tag_lesson_history"
+                android:textSize="15sp"
+                android:background="@drawable/category_label"/>
+
             <LinearLayout
-                android:background="@drawable/linear_layout_radius"
+                android:background="@drawable/main_dialog_box"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#ffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:text="@string/tag_lesson_history"
-                    android:textSize="15sp"
-                    android:background="@drawable/category_label"/>
-
-                <TextView
-                    android:fontFamily="@font/montserrat_medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lesson1_title"
-                    android:textSize="@dimen/lesson_title_size"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text2_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_regular"
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
-
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="265dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/c1_m1_l1_img1"
                     android:scaleType="centerCrop"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:src="@drawable/c1_m1_l1_img1"/>
+                    android:layout_marginBottom="@dimen/image_margin"/>
 
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/linear_layout_radius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_luka"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <TextView
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/protagonist_replicas"
-                    android:layout_width="match_parent"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:textAlignment="viewEnd"
                     android:text="@string/text3_c1_m1_l1"
-                    android:textSize="@dimen/lesson_text_size"/>
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <LinearLayout
+                android:background="@drawable/main_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
+                android:orientation="vertical">
                 <TextView
-                    android:fontFamily="@font/montserrat_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:text="@string/text4_c1_m1_l1"
-                    android:textSize="20sp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text5_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/protagonist_replicas"
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
+            </LinearLayout>
 
+            <!--Диалог Лука-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/linear_layout_radius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_luka"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <TextView
-                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:text="@string/text5_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/avatar_t5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:background="@drawable/main_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
+                android:orientation="vertical">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:text="@string/text6_c1_m1_l1"
-                    android:textSize="20sp"/>
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
 
+            <!--Диалог Абориген 1-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/vary_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t7"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_vary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:text="@string/text7_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/protagonist_replicas"
                     android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t7"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/text8_c1_m1_l1"
-                    android:textSize="20sp"/>
-
-                <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/text9_c1_m1_l1"
-                    android:textSize="20sp"/>
-
+            <!--Диалог Лука-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/linear_layout_radius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="265dp"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:src="@drawable/c1_m1_l1_img2"/>
-
+                    android:id="@+id/avatar_t8"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_luka"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:text="@string/text8_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/avatar_t8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Диалог Абориген 1-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/vary_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t9"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_vary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text9_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t9"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Диалог Абориген 2-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/valy_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t10"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_valy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:text="@string/text10_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/shaman_replicas"
                     android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t10"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!--Диалог Абориген 1-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/vary_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_vary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:text="@string/text11_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/protagonist_replicas"
                     android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t11"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <LinearLayout
+                android:background="@drawable/main_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text12_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/shaman_replicas"
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
+            </LinearLayout>
 
+            <!--Диалог Абориген 1-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/vary_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t13"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_vary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <TextView
-                    android:fontFamily="@font/montserrat_regular"
-                    android:layout_width="match_parent"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:text="@string/text13_c1_m1_l1"
-                    android:textSize="20sp"/>
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t13"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <LinearLayout
+                android:background="@drawable/main_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text14_c1_m1_l1"
-                    android:fontFamily="@font/montserrat_italic"
-                    android:textColor="@color/protagonist_replicas"
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
-
-                <Button
-                    android:id="@+id/btn_next_level"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_next_lesson"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"/>
-
             </LinearLayout>
+
+            <!--Диалог Шаман-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/vary_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t15"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_shaman"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text15_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t15"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/linear_layout_radius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t16"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_luka"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:text="@string/text16_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/avatar_t16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Диалог Шаман-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/vary_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t17"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_shaman"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text17_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar_t17"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:background="@drawable/main_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text18_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
+
+            <!--Диалог Лука-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/linear_layout_radius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin">
+                <ImageView
+                    android:id="@+id/avatar_t19"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/lesson_text_margin"
+                    android:src="@drawable/avatar_luka"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:text="@string/text19_c1_m1_l1"
+                    android:textSize="@dimen/lesson_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/avatar_t19"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_next_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:text="@string/btn_next_lesson"
+                app:backgroundTint="#FF6E40" />
         </LinearLayout>
+
+
 </ScrollView>
 </LinearLayout>

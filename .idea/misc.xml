@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/category_label.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/dialog_field.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/linear_layout_radius.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/main_dialog_box.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/valy_dialog_box.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/vary_dialog_box.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson1.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson2.xml" value="0.24468988954970264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

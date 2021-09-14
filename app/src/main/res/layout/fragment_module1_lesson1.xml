@@ -53,6 +53,7 @@
                     android:textSize="15sp"
                     android:background="@drawable/category_label"/>
 
+                <!--Заголовок-->
                 <TextView
                     android:fontFamily="@font/montserrat_medium"
                     android:textColor="#7D3F3F"

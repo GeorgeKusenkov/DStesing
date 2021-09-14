@@ -59,7 +59,7 @@
             android:textColor="#7D3F3F"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lesson3_title1"
+            android:text="@string/lesson3_title"
             android:textSize="30sp"
             android:layout_marginBottom="@dimen/dialog_box_title_margin"/>
 
@@ -361,7 +361,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="25dp"
                 android:text="@string/btn_next_lesson"
-                app:backgroundTint="#FF6E40" />
+                app:backgroundTint="#FF6E40"/>
 
             </LinearLayout>
         </LinearLayout>

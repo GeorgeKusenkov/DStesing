@@ -68,17 +68,17 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
                 }
 
                 position == 3 && userXp >= LevelGradation.LEVEL_3.xp -> {
-                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson4Fragment(position)
                     findNavController().navigate(action)
                 }
 
                 position == 4 && userXp >= LevelGradation.LEVEL_4.xp -> {
-                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson5Fragment(position)
                     findNavController().navigate(action)
                 }
 
                 position == 5 && userXp >= LevelGradation.LEVEL_5.xp -> {
-                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson3Fragment(position)
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson6Fragment(position)
                     findNavController().navigate(action)
                 }
                 else -> Toast.makeText(context, "Не хватает очков опыта", Toast.LENGTH_SHORT).show()

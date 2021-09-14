@@ -24,7 +24,7 @@ class DetailsFragment : Fragment()  {
             savedInstanceState: Bundle?
         ): View? {
 
-        val binding = inflater.inflate(R.layout.fragment_module1_lesson6, container, false)
+        val binding = inflater.inflate(R.layout.fragment_module1_lesson1, container, false)
 
 
 //    if (!scrollView.canScrollVertically(1)) {

@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.dstesing.R
 import com.example.dstesing.Saver
 
-class Module1Lesson4Fragment : Fragment() {
+class Module1Lesson8Fragment : Fragment() {
 
     private val args: DetailsFragmentArgs by navArgs()
 
@@ -20,19 +20,18 @@ class Module1Lesson4Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        val binding = inflater.inflate(R.layout.fragment_module1_lesson4, container, false)
+        val binding = inflater.inflate(R.layout.fragment_module1_lesson8, container, false)
         val button = binding.findViewById<Button>(R.id.btn_next_level)
-        val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson4)
+        val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson8)
         val position = args.position+1
         binding.setBackgroundResource(R.drawable.linear_layout_radius)
 
         button.setOnClickListener{
-            val action = Module1Lesson4FragmentDirections.actionModule1Lesson4FragmentToModule1Lesson5Fragment(position)
+            val action = Module1Lesson8FragmentDirections.actionModule1Lesson8FragmentToModule1Lesson9Fragment(position)
             findNavController().navigate(action)
         }
 
         Saver(position, scrollView, requireContext()).getPoints()
         return binding
     }
-
 }

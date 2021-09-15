@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Module1Lesson13Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EA926C"
+        android:id="@+id/fragment_module1_lesson13">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/lesson_text_margin"
+            android:layout_marginRight="@dimen/lesson_text_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/lesson13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="45sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"/>
+            <LinearLayout
+                android:background="@drawable/main_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="@dimen/lesson_text_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/tag_lesson_practice"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#ffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="15sp"
+                    android:background="@drawable/category_label"/>
+
+                <!--Заголовок-->
+                <TextView
+                    android:text="@string/lesson13_title"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="#7D3F3F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"/>
+
+                <!--Основной текст-->
+                <TextView
+                    android:text="@string/text1_c1_m1_l13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <!--Основной текст-->
+                <TextView
+                    android:text="@string/text2_c1_m1_l13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_next_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="@string/btn_next_lesson"
+                    app:backgroundTint="#FF6E40"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

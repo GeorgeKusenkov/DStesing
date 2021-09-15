@@ -53,6 +53,31 @@ class TakeALevel(val context: Context) {
             if (userXp >= LevelGradation.LEVEL_9.xp) {
                 lessons[9].images = R.drawable.file_58980661
             }
+
+            if (userXp >= LevelGradation.LEVEL_10.xp) {
+                lessons[10].images = R.drawable.file_58980658
+            }
+
+            if (userXp >= LevelGradation.LEVEL_11.xp) {
+                lessons[11].images = R.drawable.file_58980654
+            }
+
+            if (userXp >= LevelGradation.LEVEL_12.xp) {
+                lessons[12].images = R.drawable.file_58980651
+            }
+
+            if (userXp >= LevelGradation.LEVEL_13.xp) {
+                lessons[13].images = R.drawable.file_58980648
+            }
+
+            if (userXp >= LevelGradation.LEVEL_14.xp) {
+                lessons[14].images = R.drawable.file_58980647
+            }
+
+            if (userXp >= LevelGradation.LEVEL_15.xp) {
+                lessons[15].images = R.drawable.file_58980649
+            }
+
         }
     }
 }

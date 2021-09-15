@@ -5,11 +5,20 @@
       <map>
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/category_label.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/dialog_field.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/lesson_dialog_box.xml" value="0.3125" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/linear_layout_radius.xml" value="0.37552083333333336" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/main_dialog_box.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/valy_dialog_box.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/vary_dialog_box.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson1.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson10.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson11.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson12.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson13.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson14.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson15.xml" value="0.20416218155723" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson18.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson19.xml" value="0.29635416666666664" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson2.xml" value="0.24468988954970264" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson3.xml" value="0.19257605358638014" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson4.xml" value="0.21636876763875823" />
@@ -17,7 +26,7 @@
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson6.xml" value="0.2568875651526433" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson7.xml" value="0.359375" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson8.xml" value="0.359375" />
-        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson9.xml" value="0.30571555161719094" />
+        <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson9.xml" value="0.27837573385518594" />
       </map>
     </option>
   </component>

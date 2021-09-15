@@ -98,9 +98,40 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
                 }
 
                 position == 9 && userXp >= LevelGradation.LEVEL_9.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson10Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 10 && userXp >= LevelGradation.LEVEL_10.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson11Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 11 && userXp >= LevelGradation.LEVEL_11.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson12Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 12 && userXp >= LevelGradation.LEVEL_12.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson13Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 13 && userXp >= LevelGradation.LEVEL_13.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson14Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 14 && userXp >= LevelGradation.LEVEL_14.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson15Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 15 && userXp >= LevelGradation.LEVEL_15.xp -> {
                     val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson6Fragment(position)
                     findNavController().navigate(action)
                 }
+
                 else -> Toast.makeText(context, "Не хватает очков опыта", Toast.LENGTH_SHORT).show()
             }
         }

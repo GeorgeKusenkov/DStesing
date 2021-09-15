@@ -71,6 +71,24 @@
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson8Fragment"
             app:destination="@id/module1Lesson8Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson10Fragment"
+            app:destination="@id/module1Lesson10Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson11Fragment"
+            app:destination="@id/module1Lesson11Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson12Fragment"
+            app:destination="@id/module1Lesson12Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson13Fragment"
+            app:destination="@id/module1Lesson13Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson14Fragment"
+            app:destination="@id/module1Lesson14Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson15Fragment"
+            app:destination="@id/module1Lesson15Fragment" />
     </fragment>
     <fragment
         android:id="@+id/lessonsModule2Fragment"
@@ -202,6 +220,72 @@
         android:id="@+id/module1Lesson9Fragment"
         android:name="com.example.dstesing.fragments.Module1Lesson9Fragment"
         tools:layout="@layout/fragment_module1_lesson9" >
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_module1Lesson9Fragment_to_module1Lesson10Fragment"
+            app:destination="@id/module1Lesson10Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson10Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson10Fragment"
+        tools:layout="@layout/fragment_module1_lesson10">
+        <action
+            android:id="@+id/action_module1Lesson10Fragment_to_module1Lesson11Fragment"
+            app:destination="@id/module1Lesson11Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson11Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson11Fragment"
+        tools:layout="@layout/fragment_module1_lesson11">
+        <action
+            android:id="@+id/action_module1Lesson11Fragment_to_module1Lesson12Fragment"
+            app:destination="@id/module1Lesson12Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson12Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson12Fragment"
+        tools:layout="@layout/fragment_module1_lesson12">
+        <action
+            android:id="@+id/action_module1Lesson12Fragment_to_module1Lesson13Fragment"
+            app:destination="@id/module1Lesson13Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson13Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson13Fragment"
+        tools:layout="@layout/fragment_module1_lesson13">
+        <action
+            android:id="@+id/action_module1Lesson13Fragment_to_module1Lesson14Fragment"
+            app:destination="@id/module1Lesson14Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson14Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson14Fragment"
+        tools:layout="@layout/fragment_module1_lesson14">
+        <action
+            android:id="@+id/action_module1Lesson14Fragment_to_module1Lesson15Fragment"
+            app:destination="@id/module1Lesson15Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson15Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson15Fragment"
+        tools:layout="@layout/fragment_module1_lesson15">
         <argument
             android:name="POSITION"
             app:argType="integer" />

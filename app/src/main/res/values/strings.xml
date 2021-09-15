@@ -247,16 +247,21 @@
 
     <!--Базовый курс, модуль №1, урок №16-->
     <string name="lesson16_title">Диджериду-музыка, которую вы просто обязаны послушать ч.1</string>
-    <string name="text1_c1_m1_l16">Заходите в гости! У тебе кое-что покажу!</string>
-    <string name="text2_c1_m1_l16">Вся команда забралась по отвесной леснице на деревянную платформу на которой была построена хижина. Внутри было тесно, но уютно. Лука заметил много разных предметов не свойственных быту аборигенов - это были какие-то журналы, диски, в углу даже стоял граммофон, были пластинки и кассеты, на стене висели картины, фотографии.</string>
+    <string name="text1_c1_m1_l16">Заходите в гости! Я вам кое-что покажу!</string>
+    <string name="text2_c1_m1_l16">Вся команда забралась по отвесной леснице на деревянную платформу на которой была построена хижина.\n\nВнутри было тесно, но уютно. Лука заметил много разных предметов не свойственных быту аборигенов - это были какие-то журналы, диски, в углу даже стоял граммофон, были пластинки и кассеты, на стене висели картины, фотографии.</string>
     <string name="text3_c1_m1_l16">Иногда море преподносит нам новые дары и я понемногу собираю тут всякого. У меня большая коллекцию всяких диковинных вещей, а особенно всякой диджериду музыки. Приходится, конечно фильтровать всё что ко мне попадает, но сегодня я буду переслушивать свои любимые альбомы. <b>Это музыка, которую ты просто обязан послушать!</b> Присоединишься?</string>
     <string name="text4_c1_m1_l16">Да, конечно!</string>
     <string name="text5_c1_m1_l16">Отлично! Устраивайтесь поудобнее. Вот что мы будем сегодня слушать:</string>
-    <string name="text6_c1_m1_l16">1. Bedarra David Hudson (1996)</string>
-    <string name="text7_c1_m1_l16">2. Ash Dargan - Demurru Meditation (2009)</string>
-    <string name="text8_c1_m1_l16">3. ZALEM TRIBES (2010)</string>
-    <string name="text9_c1_m1_l16">4. Dubravko Lapaine - Kosmopterix (2009)</string>
-    <string name="text10_c1_m1_l16">5. SAGE Eucaliptology (2015)</string>
+    <string name="text6_c1_m1_l16"><b>Автор:</b> David Hudson\n<b>Альбом:</b> Bedarra\n<b>Год:</b> 1996\n<b>Описание:</b> Сочетание традиционных песен аборигенов и народов Торресова пролива</string>
+    <string name="text7_c1_m1_l16"><b>Ссылка:</b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</string>
+    <string name="text8_c1_m1_l16">Ash Dargan - Demurru Meditation (2009)</string>
+    <string name="text9_c1_m1_l16"><b>Ссылка:</b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</string>
+    <string name="text10_c1_m1_l16">ZALEM TRIBES (2010)</string>
+    <string name="text11_c1_m1_l16"><b>Ссылка:</b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</string>
+    <string name="text12_c1_m1_l16">Dubravko Lapaine - Kosmopterix (2009)</string>
+    <string name="text13_c1_m1_l16"><b>Ссылка:</b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</string>
+    <string name="text14_c1_m1_l16">SAGE Eucaliptology (2015)</string>
+    <string name="text15_c1_m1_l16"><b>Ссылка:</b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</string>
 
     <!--Базовый курс, модуль №1, урок №17-->
     <string name="lesson17_title">Ещё немного об изготовлении диджериду</string>

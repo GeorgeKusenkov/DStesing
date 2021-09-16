@@ -16,5 +16,9 @@ enum class LevelGradation (val xp: Int){
     LEVEL_12(1200),
     LEVEL_13(1300),
     LEVEL_14(1400),
-    LEVEL_15(1500)
+    LEVEL_15(1500),
+    LEVEL_16(1600),
+    LEVEL_17(1700),
+    LEVEL_18(1800),
+    LEVEL_19(1900)
 }

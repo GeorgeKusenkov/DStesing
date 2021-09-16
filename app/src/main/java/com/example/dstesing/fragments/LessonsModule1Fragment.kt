@@ -18,6 +18,7 @@ import com.example.dstesing.LevelGradation
 import com.example.dstesing.OnLessonClickListener
 import com.example.dstesing.R
 import com.example.dstesing.adapters.RecyclerViewModule1Adapter
+import java.lang.Exception
 
 class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
 
@@ -49,6 +50,9 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
 
 //        val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToDetailsFragment(position, id)
 //        findNavController().navigate(action)
+
+        try {
+
 
         if (userXp != null) {
             when  {
@@ -128,13 +132,28 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
                 }
 
                 position == 15 && userXp >= LevelGradation.LEVEL_15.xp -> {
-                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson6Fragment(position)
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson16Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 16 && userXp >= LevelGradation.LEVEL_16.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson17Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 17 && userXp >= LevelGradation.LEVEL_17.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson18Fragment(position)
+                    findNavController().navigate(action)
+                }
+
+                position == 18 && userXp >= LevelGradation.LEVEL_18.xp -> {
+                    val action = LessonsModule1FragmentDirections.actionLessonsModule1FragmentToModule1Lesson19Fragment(position)
                     findNavController().navigate(action)
                 }
 
                 else -> Toast.makeText(context, "Не хватает очков опыта", Toast.LENGTH_SHORT).show()
             }
         }
-
+        } catch (e: Exception) {Toast.makeText(context, "Ошибка: $e", Toast.LENGTH_SHORT).show()}
     }
 }

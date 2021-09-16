@@ -89,6 +89,18 @@
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson15Fragment"
             app:destination="@id/module1Lesson15Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson16Fragment"
+            app:destination="@id/module1Lesson16Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson17Fragment"
+            app:destination="@id/module1Lesson17Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson18Fragment"
+            app:destination="@id/module1Lesson18Fragment" />
+        <action
+            android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson19Fragment"
+            app:destination="@id/module1Lesson19Fragment" />
     </fragment>
     <fragment
         android:id="@+id/lessonsModule2Fragment"
@@ -286,6 +298,50 @@
         android:id="@+id/module1Lesson15Fragment"
         android:name="com.example.dstesing.fragments.Module1Lesson15Fragment"
         tools:layout="@layout/fragment_module1_lesson15">
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_module1Lesson15Fragment_to_module1Lesson16Fragment"
+            app:destination="@id/module1Lesson16Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson16Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson16Fragment"
+        tools:layout="@layout/fragment_module1_lesson16">
+        <action
+            android:id="@+id/action_module1Lesson16Fragment_to_module1Lesson17Fragment"
+            app:destination="@id/module1Lesson17Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson17Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson17Fragment"
+        tools:layout="@layout/fragment_module1_lesson17">
+        <action
+            android:id="@+id/action_module1Lesson17Fragment_to_module1Lesson18Fragment"
+            app:destination="@id/module1Lesson18Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson18Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson18Fragment"
+        tools:layout="@layout/fragment_module1_lesson18">
+        <action
+            android:id="@+id/action_module1Lesson18Fragment_to_module1Lesson19Fragment"
+            app:destination="@id/module1Lesson19Fragment" />
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/module1Lesson19Fragment"
+        android:name="com.example.dstesing.fragments.Module1Lesson19Fragment"
+        tools:layout="@layout/fragment_module1_lesson19">
         <argument
             android:name="POSITION"
             app:argType="integer" />

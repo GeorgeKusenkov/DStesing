@@ -327,6 +327,16 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <Button
+                    android:id="@+id/btn_next_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="@string/btn_next_lesson"
+                    app:backgroundTint="#FF6E40"/>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

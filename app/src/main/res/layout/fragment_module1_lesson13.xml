@@ -72,6 +72,15 @@
 
                 <!--Основной текст-->
                 <TextView
+                    android:text="@string/text2_c1_m1_l12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/lesson_text_size"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <!--Основной текст-->
+                <TextView
                     android:text="@string/text2_c1_m1_l13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

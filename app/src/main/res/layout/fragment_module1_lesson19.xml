@@ -61,6 +61,16 @@
                     android:layout_height="wrap_content"
                     android:textSize="30sp"/>
 
+                <Button
+                    android:id="@+id/btn_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                    android:text="Слушать" />
+
                 <!--Основной текст-->
                 <TextView
                     android:text="@string/text1_c1_m1_l19"

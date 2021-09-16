@@ -8,6 +8,6 @@
     <dimen name="image_margin">15dp</dimen>
     <dimen name="avatar_in_lesson">60dp</dimen>
     <dimen name="dialog_box_padding">10dp</dimen>
-    <dimen name="dialog_box_text_height">250dp</dimen>
+    <dimen name="dialog_box_text_height">0dp</dimen>
     <dimen name="dialog_box_title_margin">20dp</dimen>
 </resources>

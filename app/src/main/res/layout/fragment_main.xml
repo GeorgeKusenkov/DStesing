@@ -17,10 +17,11 @@
             android:id="@+id/userAvatar"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/file_58980647"
+            android:src="@drawable/chelovek"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/userName"
@@ -41,15 +42,6 @@
             app:layout_constraintStart_toEndOf="@+id/userName"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_marginTop="15dp"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userName" />
-
         <ImageView
             android:id="@+id/star_main_fragment"
             android:layout_width="18dp"
@@ -57,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_star"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
 
         <TextView
             android:id="@+id/textView2"
@@ -70,17 +62,17 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/star_main_fragment"
             app:layout_constraintStart_toEndOf="@+id/star_main_fragment"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
 
         <TextView
             android:id="@+id/user_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:textColor="#FF9800"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="@+id/experience_main"
             app:layout_constraintTop_toTopOf="@+id/textView2" />
 
         <ImageView
@@ -112,8 +104,9 @@
             android:textColor="#FF9800"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:layout_marginEnd="7dp"
             app:layout_constraintBottom_toBottomOf="@+id/experience_textView"
-            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintEnd_toStartOf="@+id/userAvatar"
             app:layout_constraintTop_toTopOf="@+id/experience_textView" />
 
         <ImageView
@@ -127,13 +120,14 @@
 
         <TextView
             android:id="@+id/lessons_textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="Пройдено уроков"
             android:textColor="#FF9800"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/lessons_ico_main_fragment"
+            app:layout_constraintEnd_toStartOf="@+id/user_lesson_counter"
             app:layout_constraintStart_toEndOf="@+id/experience_main_fragment"
             app:layout_constraintTop_toTopOf="@+id/lessons_ico_main_fragment" />
 
@@ -145,9 +139,10 @@
             android:textColor="#FF9800"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/lessons_textView"
-            app:layout_constraintEnd_toEndOf="@+id/progressBar"
-            app:layout_constraintTop_toTopOf="@+id/lessons_textView" />
+
+            app:layout_constraintBottom_toBottomOf="@+id/user_lesson_counter"
+            app:layout_constraintEnd_toEndOf="@+id/experience_main"
+            app:layout_constraintTop_toTopOf="@+id/user_lesson_counter" />
 
         <TextView
             android:id="@+id/user_lesson_counter"

@@ -1,12 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fragments.Module1Lesson1Fragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Module 2 lesson1"
-        android:gravity="center"
-        android:textSize="50sp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EA926C"
+            android:id="@+id/fragment_module1_lesson1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lesson_text_margin"
+                    android:layout_marginRight="@dimen/lesson_text_margin"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:background="@drawable/main_dialog_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/lesson_text_margin"
+                            android:orientation="vertical">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:background="@drawable/linear_layout_radius"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingStart="@dimen/dialog_box_padding"
+                                    android:paddingEnd="@dimen/dialog_box_padding"
+                                    android:layout_marginBottom="@dimen/lesson_text_margin">
+                                        <ImageView
+                                            android:id="@+id/imageView"
+                                            android:layout_width="@dimen/avatar_in_lesson"
+                                            android:layout_height="@dimen/avatar_in_lesson"
+                                            android:layout_margin="@dimen/lesson_text_margin"
+                                            android:src="@drawable/avatar_luka"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/text3_c1_m1_l1"
+                                            android:textSize="@dimen/lesson_text_size"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/imageView"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                </LinearLayout>
+        </ScrollView>
+</LinearLayout>

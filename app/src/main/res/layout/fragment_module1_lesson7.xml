@@ -101,6 +101,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
 
+                <Button
+                    android:id="@+id/btn_m1l7_music1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                    android:text="Пример"/>
+
                 <!--Основной текст-->
                 <TextView
                     android:layout_width="match_parent"
@@ -109,6 +119,16 @@
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_m1l7_music2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                    android:text="Пример"/>
 
                 <!--Основной текст-->
                 <TextView
@@ -119,6 +139,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
 
+                <Button
+                    android:id="@+id/btn_m1l7_music3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                    android:text="Пример"/>
+
                 <!--Основной текст-->
                 <TextView
                     android:layout_width="match_parent"
@@ -127,6 +157,16 @@
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_m1l7_music4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                    android:text="Пример"/>
 
                 <Button
                     android:id="@+id/btn_next_level"

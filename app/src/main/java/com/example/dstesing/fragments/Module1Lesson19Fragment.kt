@@ -35,9 +35,8 @@ class Module1Lesson19Fragment : Fragment() {
                 }
             }
         } catch (e: Exception) {
-            Toast.makeText(context, "Ошибка: $e", Toast.LENGTH_SHORT).show()}
-
-
+            Toast.makeText(context, "Ошибка: $e", Toast.LENGTH_SHORT).show()
+        }
         return binding
     }
 

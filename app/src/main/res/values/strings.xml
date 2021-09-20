@@ -10,6 +10,8 @@
     <string name="tag_lesson_theory">Теория</string>
     <string name="tag_lesson_practice">Практика</string>
 
+
+
     <!--Массив уроков-->
     <string name="lesson1">Урок 1</string>
     <string name="lesson2">Урок 2</string>
@@ -197,9 +199,33 @@
     <!--Базовый курс, модуль №1, урок №11-->
     <string name="lesson11_title">Обертоны. Практика</string>
     <string name="text1_c1_m1_l11"><b>Бери инструмент. Попробуй теперь проделать то же самое</b></string>
-    <string name="text2_c1_m1_l11"><b>Упражнение №1. Проговаривай по одному гласному слогу.</b>\nВдох, протяжный обертон <b>“А”</b>\nВдох, протяжный обертон <b>“О”</b>\nВдох, протяжный обертон <b>“У”</b>\nВдох, протяжный обертон <b>“Э”</b>\nВдох, протяжный обертон <b>“Е”</b>\nВдох, протяжный обертон <b>“Ю”</b>\nВдох, протяжный обертон <b>“И”</b>\n\nНе забывай тянуть звук - чем протяжней он получается - тем лучше. Играй, чувствуй разницу между гласными. Как привыкнешь к такой игре – закрой глаза - внимание на полости рта. Что меняется при разных буквах?</string>
-    <string name="text3_c1_m1_l11"><b>Упражнение №2.</b> Соединяем гласные\n\nУ-А\nУ-О\nУ-И\nУ-Е\n\nО-А\nО-У\nО-И\nО-У\n\nЕ-И\nЕ-О\nЕ-А\nЕ-У\n\nИ-Е\nИ-О\nИ-А\nИ-У</string>
-    <string name="text4_c1_m1_l11"><b>Задание:</b> придумать последовательность гласных 3-х и более и отыграть её\n\nПример:\n1) А-О-Е-И\n2) У-И-О-Е-А</string>
+    <string name="text2_c1_m1_l11"><b>Упражнение №1. Проговаривай по одному гласному слогу.</b>\n</string>
+    <string name="text3_c1_m1_l11">Вдох, протяжный обертон <b>“А”</b></string>
+    <string name="text4_c1_m1_l11">Вдох, протяжный обертон <b>“О”</b></string>
+    <string name="text5_c1_m1_l11">Вдох, протяжный обертон <b>“У”</b></string>
+    <string name="text6_c1_m1_l11">Вдох, протяжный обертон <b>“Э”</b></string>
+    <string name="text7_c1_m1_l11">Вдох, протяжный обертон <b>“Е”</b></string>
+    <string name="text8_c1_m1_l11">Вдох, протяжный обертон <b>“Ю”</b></string>
+    <string name="text9_c1_m1_l11">Вдох, протяжный обертон <b>“И”</b></string>
+    <string name="text10_c1_m1_l11">Не забывай тянуть звук - чем протяжней он получается - тем лучше. Играй, чувствуй разницу между гласными. Как привыкнешь к такой игре – закрой глаза - внимание на полости рта. Что меняется при разных буквах?</string>
+    <string name="text11_c1_m1_l11"><b>Упражнение №2.</b> Соединяем гласные\n\n</string>
+    <string name="text12_c1_m1_l11"><b>У-А</b></string>
+    <string name="text13_c1_m1_l11"><b>У-О</b></string>
+    <string name="text14_c1_m1_l11"><b>У-И</b></string>
+    <string name="text15_c1_m1_l11"><b>О-А</b></string>
+    <string name="text16_c1_m1_l11"><b>О-У</b></string>
+    <string name="text17_c1_m1_l11"><b>О-И</b></string>
+    <string name="text18_c1_m1_l11"><b>Е-И</b></string>
+    <string name="text19_c1_m1_l11"><b>Е-О</b></string>
+    <string name="text20_c1_m1_l11"><b>Е-А</b></string>
+    <string name="text21_c1_m1_l11"><b>Е-У</b></string>
+    <string name="text22_c1_m1_l11"><b>И-Е</b></string>
+    <string name="text23_c1_m1_l11"><b>И-О</b></string>
+    <string name="text24_c1_m1_l11"><b>И-А</b></string>
+    <string name="text25_c1_m1_l11"><b>И-У</b></string>
+    <string name="text26_c1_m1_l11"><b>Задание:</b> придумать последовательность гласных 3-х и более и отыграть её\n\nПример:</string>
+    <string name="text27_c1_m1_l11"><b>1) А-О-Е-И</b></string>
+    <string name="text28_c1_m1_l11"><b>2) У-И-О-Е-А</b></string>
 
     <!--Базовый курс, модуль №1, урок №12-->
     <string name="lesson12_title">РИТМ 1</string>

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ScrollView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.dstesing.Music
@@ -42,6 +43,7 @@ class Module1Lesson7Fragment : Fragment() {
         }
 
         mpButton1.setOnClickListener{Music(mpButton1, player1).play()}
+
         mpButton2.setOnClickListener{Music(mpButton2, player2).play()}
         mpButton3.setOnClickListener{Music(mpButton3, player3).play()}
         mpButton4.setOnClickListener{Music(mpButton4, player4).play()}

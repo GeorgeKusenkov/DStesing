@@ -277,15 +277,16 @@
                 android:textSize="18sp"/>
 
             <!--Основной текст-->
+
+            <!--Заголовок-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text10_c1_m1_l3"
-                android:textSize="@dimen/lesson_text_size"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:text="@string/text10_c1_m1_l3"
+                android:textSize="@dimen/lesson_text_size" />
 
-            <!--Заголовок-->
             <TextView
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="#7D3F3F"
@@ -303,6 +304,17 @@
                 android:textSize="@dimen/lesson_text_size"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id="@+id/btn_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                android:text="Слушать" />
+
 
             <!--Заголовок-->
             <TextView

@@ -71,10 +71,13 @@
                     android:textSize="@dimen/lesson_text_size"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/c1_m1_l1_img1"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/c1_m1_l1_img1"
                     android:layout_marginBottom="@dimen/image_margin"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -92,17 +95,14 @@
                         android:layout_margin="@dimen/lesson_text_margin"
                         android:src="@drawable/avatar_luka"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/txv"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                     <TextView
-                        android:id="@+id/txv"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="viewEnd"
                         android:text="@string/text3_c1_m1_l1"
                         android:textSize="@dimen/lesson_text_size"
-
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/imageView"
                         app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +125,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"/>
                 </LinearLayout>
+
 
                 <!--Диалог Лука-->
                 <androidx.constraintlayout.widget.ConstraintLayout

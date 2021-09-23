@@ -70,6 +70,14 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"/>
 
+                <Button
+                    android:id="@+id/btn_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dialog_box_text_margin"
+                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                    android:text="Пример"/>
+
                 <!--Основной текст-->
                 <TextView
                     android:text="@string/text2_c1_m1_l12"

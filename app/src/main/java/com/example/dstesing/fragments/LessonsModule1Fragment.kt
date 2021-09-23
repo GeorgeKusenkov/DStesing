@@ -29,6 +29,7 @@ class LessonsModule1Fragment : Fragment(), OnLessonClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = inflater.inflate(R.layout.fragment_module1_lessons, container, false)
+
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module1_lessons_recycler_view)
 
         layoutManager = LinearLayoutManager(context)

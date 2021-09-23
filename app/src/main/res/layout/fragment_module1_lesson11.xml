@@ -396,7 +396,7 @@
                                 android:textColor="#202020"
                                 android:textSize="@dimen/lesson_text_size"/>
                             <Button
-                                android:id="@+id/audio_c1m1l11_14"
+                                android:id="@+id/audio_c1m1l11_13"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/dialog_box_text_margin"
@@ -599,17 +599,16 @@
                                 android:text="Пример"/>
                         </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!--УРОК-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:background="@drawable/lesson_dialog_box"
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingStart="@dimen/dialog_box_padding"
-                    android:paddingEnd="@dimen/dialog_box_padding"
-                    android:layout_marginBottom="@dimen/lesson_text_margin"
-                    android:layout_marginTop="@dimen/lesson_text_margin">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lesson_text_margin"
+                    android:layout_marginRight="@dimen/lesson_text_margin"
+                    android:orientation="vertical">
+
                     <TextView
                         android:text="@string/text26_c1_m1_l11"
                         android:layout_width="match_parent"
@@ -624,39 +623,52 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <!--Блок-->
-                    <TextView
-                        android:id="@+id/textView27"
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dialog_box_text_margin"
-                        android:text="@string/text27_c1_m1_l11"
-                        android:textColor="#202020"
-                        android:textSize="@dimen/lesson_text_size"/>
-                    <Button
-                        android:id="@+id/audio_c1m1l11_23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dialog_box_text_margin"
-                        android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                        android:text="Пример"/>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dialog_box_text_margin"
+                            android:text="@string/text27_c1_m1_l11"
+                            android:textColor="#202020"
+                            android:textSize="@dimen/lesson_text_size"/>
+                        <Button
+                            android:id="@+id/audio_c1m1l11_23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dialog_box_text_margin"
+                            android:layout_marginTop="@dimen/dialog_box_text_margin"
+                            android:layout_marginBottom="@dimen/dialog_box_text_margin"
+                            android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                            android:text="Пример"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <!--Блок-->
-                    <TextView
-                        android:id="@+id/textView28"
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dialog_box_text_margin"
-                        android:text="@string/text27_c1_m1_l11"
-                        android:textColor="#202020"
-                        android:textSize="@dimen/lesson_text_size"/>
-                    <Button
-                        android:id="@+id/audio_c1m1l11_24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dialog_box_text_margin"
-                        android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                        android:text="Пример"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dialog_box_text_margin"
+                            android:text="@string/text28_c1_m1_l11"
+                            android:textColor="#202020"
+                            android:textSize="@dimen/lesson_text_size"/>
+                        <Button
+                            android:id="@+id/audio_c1m1l11_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dialog_box_text_margin"
+                            android:layout_marginTop="@dimen/dialog_box_text_margin"
+                            android:layout_marginBottom="@dimen/dialog_box_text_margin"
+                            android:drawableLeft="@drawable/ic_baseline_play_arrow"
+                            android:text="Пример"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

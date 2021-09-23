@@ -36,7 +36,7 @@ class MainFragment : Fragment(), OnCourseClickListener {
 
         //Достаём значение из SharedPreferences. Заполняем имя пользователя
         sharedPreferences = context?.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
-        userName.text = sharedPreferences?.getString("user_name", "Абориген")!!
+        userName.text = sharedPreferences?.getString("user_name", "Лука")!!
         userExperience.text = sharedPreferences?.getInt("user_experience", 0).toString()
         userLessonCounter.setText(sharedPreferences?.getInt("LESSON_COUNTER", 0).toString())
 
@@ -56,10 +56,10 @@ class MainFragment : Fragment(), OnCourseClickListener {
             else -> userLevel.setText("11")
         }
 
-        var isName = sharedPreferences?.getBoolean("is_name", false)!!
-        if (!isName) {
-            findNavController().navigate(R.id.action_mainFragment_to_userNameFragment)
-        }
+//        var isName = sharedPreferences?.getBoolean("is_name", false)!!
+//        if (!isName) {
+//            findNavController().navigate(R.id.action_mainFragment_to_userNameFragment)
+//        }
 
         val recyclerView = binding.findViewById<RecyclerView>(R.id.module_recycler_view)
         layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)

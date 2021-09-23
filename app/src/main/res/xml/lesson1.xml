@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lesson>
+
+    <Text text="Text Tag"/>
+
+    <Tag text="Lesson Tag"/>
+
+</Lesson>

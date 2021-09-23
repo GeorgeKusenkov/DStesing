@@ -13,7 +13,7 @@ class RecyclerViewModule1Adapter (private val lessonClickListener: OnLessonClick
 
     private var lessons = DataStorage.getLessonsModule1List()
 
-    inner class ViewHolder(itemView: View) :  RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemTitle: TextView = itemView.findViewById(R.id.lesson_title)
         val itemDetails: TextView = itemView.findViewById(R.id.lesson_description)
         val itemImage: ImageView = itemView.findViewById(R.id.lesson_image)

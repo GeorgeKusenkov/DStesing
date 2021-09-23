@@ -37,12 +37,12 @@ class UserNameFragment : Fragment() {
 //        }
 
         //При нажатии на кнопку сохраняем имя и передаем в SharePreferences, переходим на главный экран.
-        button.setOnClickListener {
-            editName = etText.text.toString()
-            isName = true
-            saveData(editName, isName)
-            findNavController().navigate(R.id.action_userNameFragment_to_mainFragment)
-        }
+//        button.setOnClickListener {
+//            editName = etText.text.toString()
+//            isName = true
+//            saveData(editName, isName)
+//            findNavController().navigate(R.id.action_userNameFragment_to_mainFragment)
+//        }
 
         return binding
     }

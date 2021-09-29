@@ -5,11 +5,11 @@ import android.content.res.Resources
 object DataStorage {
     fun getModuleList(): Array<Module> {
         return arrayOf(
-            Module("Занятие 1", "Окунитесь с головой в основы звукоизвлечения",R.drawable.bear),
-            Module("Занятие 2", "This is Module #2",R.drawable.elephant),
-            Module("Занятие 3", "This is Module #3",R.drawable.wild_boar),
-            Module("Занятие 4", "This is Module #4",R.drawable.hedgehog),
-            Module("Занятие 5", "This is Module #5",R.drawable.bison)
+            Module("Модуль 1", "Окунитесь с головой в основы звукоизвлечения",R.drawable.bear),
+            Module("Модуль 2", "Океан похитил все ритмы. Помогите Луке найти их все",R.drawable.elephant),
+            Module("Модуль 3", "Лука отправляется в долину кругового дыхания. Духи поведают о древней технике",R.drawable.wild_boar),
+            Module("Модуль 4", "Знакомство со звуками животных и разных техник игры",R.drawable.hedgehog),
+            Module("Модуль 5", "Продвинутые техники игры",R.drawable.bison)
         )
     }
 

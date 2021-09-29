@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/module_card_view"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
     app:cardElevation="3dp"
     android:layout_marginTop="10dp"
@@ -24,7 +24,6 @@
             android:id="@+id/lesson_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/category_label"
             android:fontFamily="@font/montserrat_bold"
@@ -35,18 +34,23 @@
             android:text="Модуль 1"
             android:textColor="#ffff"
             android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/module_description"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/module_description"
-            android:layout_width="210dp"
-            android:layout_height="80dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="This is description module one."
             android:textColor="#7D3F3F"
-            app:layout_constraintStart_toStartOf="@+id/lesson_title"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toStartOf="@+id/module_image"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lesson_title" />
 
         <ImageView
@@ -63,13 +67,12 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginBottom="25sp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Перейти к урокам"
             android:textColor="#FF834E"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/module_description" />
 
         <ImageView
             android:layout_width="wrap_content"

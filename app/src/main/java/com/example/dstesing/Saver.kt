@@ -28,7 +28,7 @@ class Saver (var position: Int, var scrollView: NestedScrollView, var context: C
                 counter+=1
                 checkXP = true
                 saveData()
-                Toast.makeText(context, "Вы получили $xp очков опыта", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Вы получили 100 очков опыта", Toast.LENGTH_SHORT).show()
             }
         }
     }

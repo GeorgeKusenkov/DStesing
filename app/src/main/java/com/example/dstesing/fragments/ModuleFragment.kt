@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
@@ -38,7 +39,10 @@ class ModuleFragment : Fragment(), OnCardClickListener {
     override fun cardClick(module: Module, position: Int) {
         when(position) {
             0 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule1Fragment)
-            1 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule2Fragment)
+            1 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
+            2 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
+            3 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
+            4 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
         }
     }
 }

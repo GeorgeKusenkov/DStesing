@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ScrollView
+import androidx.core.widget.NestedScrollView
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.dstesing.R
-import com.example.dstesing.Saver
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.dstesing.*
 
 class Module1Lesson15Fragment : Fragment() {
 
@@ -22,9 +23,12 @@ class Module1Lesson15Fragment : Fragment() {
     ): View? {
         val binding = inflater.inflate(R.layout.fragment_module1_lesson15, container, false)
         val button = binding.findViewById<Button>(R.id.btn_next_level)
-        val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson15)
+        val scrollView = binding.findViewById<NestedScrollView>(R.id.fragment_module1_lesson15)
         val position = args.position+1
-        binding.setBackgroundResource(R.drawable.linear_layout_radius)
+
+        val recyclerView = binding.findViewById<RecyclerView>(R.id.lesson15_list_view)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = Adapters(parseLesson(resources,R.xml.basic_module1_lesson15), resources, requireContext())
 
         button.setOnClickListener{
             val action = Module1Lesson15FragmentDirections.actionModule1Lesson15FragmentToModule1Lesson16Fragment(position)

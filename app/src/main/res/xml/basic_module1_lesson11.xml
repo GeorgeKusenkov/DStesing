@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lesson>
+    <Tag>Практика</Tag>
+    <Title>Обертоны. Практика</Title>
+    <Text>&lt;b>Бери инструмент. Попробуй теперь проделать то же самое.&lt;/b></Text>
+    <Text>&lt;b>Упражнение №1. Проговаривай по одному гласному слогу.&lt;/b></Text>
+    <Text>Вдох, протяжный обертон &lt;b>“А”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_1</AudioButton>
+    <Text>Вдох, протяжный обертон &lt;b>“О”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_2</AudioButton>
+    <Text>Вдох, протяжный обертон &lt;b>“У”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_3</AudioButton>
+    <Text>Вдох, протяжный обертон &lt;b>“Э”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_4</AudioButton>
+    <Text>Вдох, протяжный обертон &lt;b>“Е”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_5</AudioButton>
+    <Text>Вдох, протяжный обертон &lt;b>“Ю”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_6</AudioButton>
+    <Text>Вдох, протяжный обертон &lt;b>“И”&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_7</AudioButton>
+    <Text>Не забывай тянуть звук - чем протяжней он получается - тем лучше. Играй, чувствуй разницу между гласными. Как привыкнешь к такой игре – закрой глаза - внимание на полости рта. Что меняется при разных буквах?</Text>
+    <Text>&lt;b>Упражнение №2.&lt;/b> Соединяем гласные&lt;br>&lt;/br></Text>
+    <Text>&lt;b>У-А&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_8</AudioButton>
+    <Text>&lt;b>У-О&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_9</AudioButton>
+    <Text>&lt;b>У-И&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_10</AudioButton>
+    <Text>&lt;b>О-А&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_11</AudioButton>
+    <Text>&lt;b>О-У&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_12</AudioButton>
+    <Text>&lt;b>О-И&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_13</AudioButton>
+    <Text>&lt;b>Е-И&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_14</AudioButton>
+    <Text>&lt;b>Е-О&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_15</AudioButton>
+    <Text>&lt;b>Е-А&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_16</AudioButton>
+    <Text>&lt;b>Е-У&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_17</AudioButton>
+    <Text>&lt;b>И-Е&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_18</AudioButton>
+    <Text>&lt;b>И-О&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_19</AudioButton>
+    <Text>&lt;b>И-А&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_20</AudioButton>
+    <Text>&lt;b>И-У&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_21</AudioButton>
+    <Text>&lt;b>Задание:&lt;/b> придумать последовательность гласных 3-х и более и отыграть её&lt;br>&lt;/br>Пример:</Text>
+    <Text>&lt;b>1) А-О-Е-И&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_21</AudioButton>
+    <Text>&lt;b>2) У-И-О-Е-А&lt;/b></Text>
+    <AudioButton>audio_c1m1l11_22</AudioButton>
+</Lesson>

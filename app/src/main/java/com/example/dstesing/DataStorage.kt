@@ -1,5 +1,7 @@
 package com.example.dstesing
 
+import android.content.res.Resources
+
 object DataStorage {
     fun getModuleList(): Array<Module> {
         return arrayOf(
@@ -10,6 +12,21 @@ object DataStorage {
             Module("Занятие 5", "This is Module #5",R.drawable.bison)
         )
     }
+
+//    fun getLesson1(): Array<String> {
+//
+//        val arr = arrayListOf(R.array.day_of_weeks)
+//
+//        val lessonsMap = mapOf(
+//            "TAG"           to arr[1],
+//            "TEXT"          to "this is lesson 2",
+//            "LUKA_DIALOG"   to "this is lesson 3",
+//            "TEXT"          to "this is lesson 4",
+//        )
+//
+//        val mass = R.array.day_of_weeks
+//
+//    }
 
     //Basic course Main
     fun getCourseList(): Array<Course> {

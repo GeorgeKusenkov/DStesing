@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lesson>
+    <Tag>Теория</Tag>
+    <Title>Диджериду-музыка, которую вы просто обязаны послушать ч.1</Title>
+    <DialogJack>Заходите в гости! Я вам кое-что покажу!</DialogJack>
+    <Text>Вся команда забралась по отвесной леснице на деревянную платформу на которой была построена хижина.\n\nВнутри было тесно, но уютно. Лука заметил много разных предметов не свойственных быту аборигенов - это были какие-то журналы, диски, в углу даже стоял граммофон, были пластинки и кассеты, на стене висели картины, фотографии.</Text>
+    <DialogJack>Иногда море преподносит нам новые дары и я понемногу собираю тут всякого. У меня большая коллекцию всяких диковинных вещей, а особенно всякой диджериду музыки. Приходится, конечно фильтровать всё что ко мне попадает, но сегодня я буду переслушивать свои любимые альбомы. &lt;b>Это музыка, которую ты просто обязан послушать!&lt;/b> Присоединишься?</DialogJack>
+    <DialogLuka>Да, конечно!</DialogLuka>
+    <DialogJack>Отлично! Устраивайтесь поудобнее. Вот что мы будем сегодня слушать:</DialogJack>
+
+    <Text>&lt;b>Автор:&lt;/b> David Hudson\n&lt;b>Альбом:&lt;/b> Bedarra\n&lt;b>Год:&lt;/b> 1996\n&lt;b>Описание:&lt;/b> Сочетание традиционных песен аборигенов и народов Торресова пролива</Text>
+    <Text>&lt;b>Ссылка:&lt;/b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</Text>
+    <Text>Ash Dargan - Demurru Meditation (2009)</Text>
+    <Text>&lt;b>Ссылка:&lt;/b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</Text>
+    <Text>ZALEM TRIBES (2010)</Text>
+    <Text>&lt;b>Ссылка:&lt;/b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</Text>
+    <Text>Dubravko Lapaine - Kosmopterix (2009)</Text>
+    <Text>&lt;b>Ссылка:&lt;/b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</Text>
+    <Text>SAGE Eucaliptology (2015)</Text>
+    <Text>&lt;b>Ссылка:&lt;/b> amazon.com/Bedarra-David-Hudson/dp/B00005NOUX</Text>
+</Lesson>

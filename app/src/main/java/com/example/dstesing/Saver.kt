@@ -3,8 +3,9 @@ package com.example.dstesing
 import android.content.Context
 import android.widget.ScrollView
 import android.widget.Toast
+import androidx.core.widget.NestedScrollView
 
-class Saver(var position: Int, var scrollView: ScrollView, var context: Context) {
+class Saver (var position: Int, var scrollView: NestedScrollView, var context: Context) {
 
     private var shared = context.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
     private var xp = shared?.getInt("user_experience", 0)!!

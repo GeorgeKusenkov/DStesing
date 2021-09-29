@@ -1,183 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Module1Lesson7Fragment">
+    tools:context=".fragments.Module1Lesson7Fragment"
+    android:id="@+id/fragment_module1_lesson7"
+    android:background="#EA926C">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EA926C"
-        android:id="@+id/fragment_module1_lesson7">
+        android:orientation="vertical"
+        android:background="#EA926C">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/lesson7"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="45sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"/>
+
+        <LinearLayout
+            android:background="@drawable/main_dialog_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/lesson_text_margin"
             android:layout_marginRight="@dimen/lesson_text_margin"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginBottom="@dimen/lesson_text_margin"
             android:orientation="vertical">
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lesson7_list_view"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_next_level"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lesson7"
-                android:textAlignment="center"
-                android:fontFamily="@font/montserrat_medium"
-                android:textSize="45sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="40dp"/>
-            <LinearLayout
-                android:background="@drawable/main_dialog_box"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:layout_marginBottom="@dimen/lesson_text_margin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="#ffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:text="@string/tag_lesson_practice"
-                    android:textSize="15sp"
-                    android:background="@drawable/category_label"/>
-
-                <!--Заголовок-->
-                <TextView
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textColor="#7D3F3F"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lesson7_title"
-                    android:textSize="30sp"/>
-
-                <!--Диалог Учитель-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:background="@drawable/vary_dialog_box"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingStart="@dimen/dialog_box_padding"
-                    android:paddingEnd="@dimen/dialog_box_padding"
-                    android:layout_marginBottom="@dimen/lesson_text_margin"
-                    android:layout_marginTop="@dimen/lesson_text_margin">
-                    <ImageView
-                        android:id="@+id/avatar_t1"
-                        android:layout_width="@dimen/avatar_in_lesson"
-                        android:layout_height="@dimen/avatar_in_lesson"
-                        android:layout_margin="@dimen/lesson_text_margin"
-                        android:src="@drawable/avatar_teacher"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                    <TextView
-                        android:layout_width="@dimen/dialog_box_text_height"
-                        android:layout_height="wrap_content"
-                        android:text="@string/text1_c1_m1_l7"
-                        android:textSize="@dimen/lesson_text_size"
-                        android:layout_marginTop="@dimen/dialog_box_text_margin"
-                        android:layout_marginBottom="@dimen/dialog_box_text_margin"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/avatar_t1"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <!--Основной текст-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text2_c1_m1_l7"
-                    android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-
-                <Button
-                    android:id="@+id/btn_m1l7_music1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:text="Пример"/>
-
-                <!--Основной текст-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text3_c1_m1_l7"
-                    android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-
-                <Button
-                    android:id="@+id/btn_m1l7_music2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:text="Пример"/>
-
-                <!--Основной текст-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text4_c1_m1_l7"
-                    android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-
-                <Button
-                    android:id="@+id/btn_m1l7_music3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:text="Пример"/>
-
-                <!--Основной текст-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text5_c1_m1_l7"
-                    android:textSize="@dimen/lesson_text_size"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-
-                <Button
-                    android:id="@+id/btn_m1l7_music4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:text="Пример"/>
-
-                <Button
-                    android:id="@+id/btn_next_level"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
-                    android:text="@string/btn_next_lesson"
-                    app:backgroundTint="#FF6E40"/>
-            </LinearLayout>
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:text="@string/btn_next_lesson"
+                app:backgroundTint="#FF6E40" />
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

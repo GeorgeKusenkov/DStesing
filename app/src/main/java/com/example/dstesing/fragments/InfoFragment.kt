@@ -13,25 +13,41 @@ import android.widget.*
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dstesing.Adapters
-import com.example.dstesing.R
 import com.example.dstesing.adapters.RecyclerViewModule1Adapter
-import com.example.dstesing.parseLesson
+import android.widget.Toast
+
+import org.xmlpull.v1.XmlPullParser
+import android.widget.ArrayAdapter
+import com.example.dstesing.*
+import java.io.IOException
+import org.xmlpull.v1.XmlPullParserException
+
+import android.text.TextUtils
+import android.util.Log
+import org.xmlpull.v1.XmlPullParserFactory
+
 
 class InfoFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         val binding = inflater.inflate(R.layout.fragment_info, container, false)
 
 
+//        val recyclerView = binding.findViewById<RecyclerView>(R.id.lesson1_list_view)
+//        recyclerView.layoutManager = LinearLayoutManager(context)
+//        recyclerView.adapter = Adapters(parseLesson(resources, R.xml.lesson1))
 
-        val recyclerView = binding.findViewById<RecyclerView>(R.id. test_list_view)
 
-        recyclerView.layoutManager = LinearLayoutManager(context)
 
-        recyclerView.adapter = Adapters(parseLesson(resources, R.xml.lesson1))
-
+//        val listView = binding.findViewById(R.id.listView) as ListView
+//        val list: ArrayList<String> = ArrayList()
+//        val adapter = ArrayAdapter(requireContext(),android.R.layout.simple_list_item_1, list)
+//        listView.adapter = adapter
 
 
 

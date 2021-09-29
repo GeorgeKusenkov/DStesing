@@ -4,6 +4,7 @@
     <dimen name="lesson_text">15sp</dimen>
     <dimen name="lesson_text_size">17sp</dimen>
     <dimen name="lesson_text_margin">7dp</dimen>
+    <dimen name="dialog_box_margin">10dp</dimen>
     <dimen name="dialog_box_text_margin">7dp</dimen>
     <dimen name="image_margin">15dp</dimen>
     <dimen name="avatar_in_lesson">60dp</dimen>

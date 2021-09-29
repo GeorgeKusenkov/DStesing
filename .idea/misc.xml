@@ -5,33 +5,42 @@
       <map>
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/ic_splashscreen_image.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/lesson_dialog_box.xml" value="0.29375" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/linear_layout_radius.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/main_dialog_box.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/meloman_dialog_box.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/music_button.xml" value="0.4036458333333333" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/valy_dialog_box.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/drawable/vary_dialog_box.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/activity_splash_screen.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/course_card.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_card.xml" value="0.5" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_luka_card.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_jack_card.xml" value="0.33" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_jarra_card.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_jarru_card.xml" value="0.67" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_kabikari_card.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_luka_card.xml" value="0.45104895104895104" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_valy_card.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/dialog_box_vary_card.xml" value="0.67" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_info.xml" value="0.33" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_main.xml" value="0.25" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module.xml" value="0.3625" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson1.xml" value="0.25597646193453477" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson1.xml" value="0.25" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson10.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson11.xml" value="0.2524271844660194" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson12.xml" value="0.3875" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson12.xml" value="0.35020519835841313" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson13.xml" value="0.3875" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson14.xml" value="0.3875" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson15.xml" value="0.33" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson16.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson16.xml" value="0.67" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson17.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson18.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson19.xml" value="0.3625" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson2.xml" value="0.3625" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson3.xml" value="0.67" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson4.xml" value="0.2673374056773266" />
-        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson5.xml" value="0.3875" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson2.xml" value="0.11364764267990074" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson3.xml" value="0.10798696006519967" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson4.xml" value="0.14184397163120568" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson5.xml" value="0.12195121951219512" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson6.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson7.xml" value="0.33" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module1_lesson8.xml" value="0.21979166666666666" />
@@ -41,14 +50,42 @@
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module2_lesson2.xml" value="0.3875" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_module2_lesson3.xml" value="0.3875" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/fragment_splash_screen.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/in_lesson_audio_button.xml" value="0.33" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/in_lesson_image.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/in_lesson_music_album.xml" value="0.5" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/in_lesson_tag.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/in_lesson_text.xml" value="0.67" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/in_lesson_title.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/lesson_card.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/list_item.xml" value="0.203125" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/module_card.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/layout/test.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson10.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson11.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson12.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson13.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson14.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson15.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson16.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson17.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson18.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson19.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson2.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson3.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson4.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson5.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson6.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson7.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson8.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/basic_module1_lesson9.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/contacts.xml" value="0.31574074074074077" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/data.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/employees.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/lesson1.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/model.xml" value="0.3625" />
+        <entry key="..\:/Users/g-jaz/AndroidStudioProjects/DStesing/app/src/main/res/xml/row.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/list_content.xml" value="0.3625" />
         <entry key="..\:/Users/g-jaz/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.3625" />
         <entry key="..\:/Users/kuznetsov.e.v/AndroidStudioProjects/DStesing/app/src/main/res/drawable/category_label.xml" value="0.31614583333333335" />

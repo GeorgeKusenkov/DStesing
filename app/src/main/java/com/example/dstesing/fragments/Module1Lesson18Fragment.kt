@@ -6,12 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ScrollView
 import android.widget.Toast
+import androidx.core.widget.NestedScrollView
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.dstesing.R
-import com.example.dstesing.Saver
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.dstesing.*
 import java.lang.Exception
 
 class Module1Lesson18Fragment : Fragment() {
@@ -24,9 +25,12 @@ class Module1Lesson18Fragment : Fragment() {
     ): View? {
         val binding = inflater.inflate(R.layout.fragment_module1_lesson18, container, false)
         val button = binding.findViewById<Button>(R.id.btn_next_level)
-        val scrollView = binding.findViewById<ScrollView>(R.id.fragment_module1_lesson18)
+        val scrollView = binding.findViewById<NestedScrollView>(R.id.fragment_module1_lesson18)
         val position = args.position+1
-        binding.setBackgroundResource(R.drawable.linear_layout_radius)
+
+        val recyclerView = binding.findViewById<RecyclerView>(R.id.lesson18_list_view)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = Adapters(parseLesson(resources,R.xml.basic_module1_lesson18), resources, requireContext())
 
         try {
             button.setOnClickListener{
@@ -34,8 +38,6 @@ class Module1Lesson18Fragment : Fragment() {
                 findNavController().navigate(action)
             }
         } catch (e: Exception) {Toast.makeText(context, "Ошибка: $e", Toast.LENGTH_SHORT).show()}
-
-
 
         Saver(position, scrollView, requireContext()).getPoints()
         return binding

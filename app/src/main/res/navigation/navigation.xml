@@ -46,10 +46,12 @@
             app:destination="@id/module1Lesson3Fragment" />
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson2Fragment"
-            app:destination="@id/module1Lesson2Fragment" />
+            app:destination="@id/module1Lesson2Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson1Fragment"
-            app:destination="@id/module1Lesson1Fragment" />
+            app:destination="@id/module1Lesson1Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <action
             android:id="@+id/action_lessonsModule1Fragment_to_module1Lesson4Fragment"
             app:destination="@id/module1Lesson4Fragment" />
@@ -138,7 +140,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson3Fragment_to_module1Lesson4Fragment"
-            app:destination="@id/module1Lesson4Fragment" />
+            app:destination="@id/module1Lesson4Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson2Fragment"
@@ -149,7 +152,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson2Fragment_to_module1Lesson3Fragment"
-            app:destination="@id/module1Lesson3Fragment" />
+            app:destination="@id/module1Lesson3Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson1Fragment"
@@ -160,7 +164,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson1Fragment_to_module1Lesson2Fragment2"
-            app:destination="@id/module1Lesson2Fragment" />
+            app:destination="@id/module1Lesson2Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson4Fragment"
@@ -171,7 +176,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson4Fragment_to_module1Lesson5Fragment"
-            app:destination="@id/module1Lesson5Fragment" />
+            app:destination="@id/module1Lesson5Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson5Fragment"
@@ -182,7 +188,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson5Fragment_to_module1Lesson6Fragment"
-            app:destination="@id/module1Lesson6Fragment" />
+            app:destination="@id/module1Lesson6Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson6Fragment"
@@ -192,7 +199,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson6Fragment_to_module1Lesson7Fragment"
-            app:destination="@id/module1Lesson7Fragment" />
+            app:destination="@id/module1Lesson7Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson7Fragment"
@@ -200,7 +208,8 @@
         tools:layout="@layout/fragment_module1_lesson7" >
         <action
             android:id="@+id/action_module1Lesson7Fragment_to_module1Lesson8Fragment"
-            app:destination="@id/module1Lesson8Fragment" />
+            app:destination="@id/module1Lesson8Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -211,7 +220,8 @@
         tools:layout="@layout/fragment_module1_lesson8" >
         <action
             android:id="@+id/action_module1Lesson8Fragment_to_module1Lesson9Fragment"
-            app:destination="@id/module1Lesson9Fragment" />
+            app:destination="@id/module1Lesson9Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -225,7 +235,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson9Fragment_to_module1Lesson10Fragment"
-            app:destination="@id/module1Lesson10Fragment" />
+            app:destination="@id/module1Lesson10Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson10Fragment"
@@ -233,7 +244,8 @@
         tools:layout="@layout/fragment_module1_lesson10">
         <action
             android:id="@+id/action_module1Lesson10Fragment_to_module1Lesson11Fragment"
-            app:destination="@id/module1Lesson11Fragment" />
+            app:destination="@id/module1Lesson11Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -244,7 +256,8 @@
         tools:layout="@layout/fragment_module1_lesson11">
         <action
             android:id="@+id/action_module1Lesson11Fragment_to_module1Lesson12Fragment"
-            app:destination="@id/module1Lesson12Fragment" />
+            app:destination="@id/module1Lesson12Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -255,7 +268,8 @@
         tools:layout="@layout/fragment_module1_lesson12">
         <action
             android:id="@+id/action_module1Lesson12Fragment_to_module1Lesson13Fragment"
-            app:destination="@id/module1Lesson13Fragment" />
+            app:destination="@id/module1Lesson13Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -266,7 +280,8 @@
         tools:layout="@layout/fragment_module1_lesson13">
         <action
             android:id="@+id/action_module1Lesson13Fragment_to_module1Lesson14Fragment"
-            app:destination="@id/module1Lesson14Fragment" />
+            app:destination="@id/module1Lesson14Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -277,7 +292,8 @@
         tools:layout="@layout/fragment_module1_lesson14">
         <action
             android:id="@+id/action_module1Lesson14Fragment_to_module1Lesson15Fragment"
-            app:destination="@id/module1Lesson15Fragment" />
+            app:destination="@id/module1Lesson15Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -291,7 +307,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_module1Lesson15Fragment_to_module1Lesson16Fragment"
-            app:destination="@id/module1Lesson16Fragment" />
+            app:destination="@id/module1Lesson16Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/module1Lesson16Fragment"
@@ -299,7 +316,8 @@
         tools:layout="@layout/fragment_module1_lesson16">
         <action
             android:id="@+id/action_module1Lesson16Fragment_to_module1Lesson17Fragment"
-            app:destination="@id/module1Lesson17Fragment" />
+            app:destination="@id/module1Lesson17Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -310,7 +328,8 @@
         tools:layout="@layout/fragment_module1_lesson17">
         <action
             android:id="@+id/action_module1Lesson17Fragment_to_module1Lesson18Fragment"
-            app:destination="@id/module1Lesson18Fragment" />
+            app:destination="@id/module1Lesson18Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />
@@ -321,7 +340,8 @@
         tools:layout="@layout/fragment_module1_lesson18">
         <action
             android:id="@+id/action_module1Lesson18Fragment_to_module1Lesson19Fragment"
-            app:destination="@id/module1Lesson19Fragment" />
+            app:destination="@id/module1Lesson19Fragment"
+            app:popUpTo="@id/lessonsModule1Fragment" />
         <argument
             android:name="POSITION"
             app:argType="integer" />

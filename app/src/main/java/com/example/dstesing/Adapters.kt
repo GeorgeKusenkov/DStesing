@@ -3,6 +3,7 @@ package com.example.dstesing
 import android.content.Context
 import android.content.res.Resources
 import android.media.MediaPlayer
+import android.service.autofill.OnClickAction
 import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +16,9 @@ import java.lang.IllegalArgumentException
 
 
 class Adapters(private val cards: List<Card>, val resources: Resources, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    var player: MediaPlayer? = null
+//    var button: Button? = null
 
     override fun getItemViewType(position: Int): Int = when(cards[position]) {
         is Card.Tag -> 1
@@ -51,8 +55,6 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
-//        val button: Button = holder.itemView.findViewById(R.id.in_lesson_audio_button)
-
         when(val card = cards[position]) {
             is Card.Tag -> holder.itemView.findViewById<TextView>(R.id.in_lesson_tag).text = Html.fromHtml(card.tagText)
             is Card.Text -> holder.itemView.findViewById<TextView>(R.id.in_lesson_text).text = Html.fromHtml(card.lessonText)
@@ -65,18 +67,41 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
             is Card.JackDialogBox -> holder.itemView.findViewById<TextView>(R.id.jack_text).text =  Html.fromHtml(card.jackText)
             is Card.Image -> holder.itemView.findViewById<ImageView>(R.id.in_lesson_image).setImageResource(getImageId(card.image))
             is Card.AudioButton -> {
+
+//              ВЫНЕСТИ В ОТДЕЛЬНЫЙ КЛАСС. Проигрыватель создает новые потоки, которые я не могу поймать. ПОэтому пришлось вынести всё сюда.
                 val button: Button = holder.itemView.findViewById(R.id.in_lesson_audio_button)
-                val player = MediaPlayer.create(context, getAudioId(card.audioButton))
-                button.setOnClickListener{Music(button, player).play()}
+
+                button.setOnClickListener {
+                        stopPlaying(button)
+                        player = MediaPlayer.create(context, getAudioId(card.audioButton))
+                        player?.start()
+//                        button?.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+                }
             }
         }
+    }
+
+    private fun stopPlaying(button: Button) {
+            if (player != null) {
+                if (player?.isPlaying == true) {
+                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+                    player?.stop()
+                    player?.reset()
+                    player?.release()
+                    player = null
+                } else {
+                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+                }
+            }
+
+
     }
 
     override fun getItemCount() = cards.size
 
     private fun getImageId(imageElement: String): Int = resources.getIdentifier(imageElement, "drawable", context.packageName)
 
-    private fun getAudioId(audioElement: String): Int =resources.getIdentifier(audioElement, "raw", context.packageName)
+    private fun getAudioId(audioElement: String): Int = resources.getIdentifier(audioElement, "raw", context.packageName)
 
 //    fun checkHtml(text: String) {
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

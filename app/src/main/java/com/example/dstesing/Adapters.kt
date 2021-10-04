@@ -17,7 +17,8 @@ import java.lang.IllegalArgumentException
 
 class Adapters(private val cards: List<Card>, val resources: Resources, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    var player: MediaPlayer? = null
+    private var mp: MediaPlayer? = null
+    private var buttonArray = mutableListOf<Button>()
 //    var button: Button? = null
 
     override fun getItemViewType(position: Int): Int = when(cards[position]) {
@@ -72,30 +73,94 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
                 val button: Button = holder.itemView.findViewById(R.id.in_lesson_audio_button)
 
                 button.setOnClickListener {
-                        stopPlaying(button)
-                        player = MediaPlayer.create(context, getAudioId(card.audioButton))
-                        player?.start()
-//                        button?.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+
+                    if (buttonArray.size >= 2) {
+                        buttonArray.removeFirst()
+                    }
+
+                    buttonArray.add(button)
+
+                    Log.d("deda", "=========================================")
+                    Log.d("deda", "BTN START ARRAY = $buttonArray")
+
+                    if (mp != null && buttonArray[0] == buttonArray[1]) {
+                        Log.d("deda", "=========================================")
+                        Log.d("deda", "CLICK THIS BUTTON")
+                        Log.d("deda", "STOP THIS BTN1")
+                        Log.d("deda", "BTN ID = ${button}")
+                        Log.d("deda", "BTN ARRAY = $buttonArray")
+                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+                        mp?.stop()
+                        mp?.release()
+                        mp = null
+                        Log.d("deda", "AFTER REMOVE ARRAY = $buttonArray")
+
+                    } else if (mp != null && buttonArray[0] != buttonArray[1]) {
+                        Log.d("deda", "=========================================")
+                        Log.d("deda", "CLICK ANOTHER BUTTON")
+                        Log.d("deda", "STOP ANOTHER BUTTON")
+                        Log.d("deda", "BTN ID = ${button}")
+                        Log.d("deda", "BTN ARRAY = $buttonArray")
+                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+                        buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
+                        mp?.stop()
+                        mp?.release()
+                        mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_2)
+                        mp?.start()
+
+                    }
+                    else if (mp == null && buttonArray.size == 2 && buttonArray[0] != buttonArray[1] ) {
+                        buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+                        mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
+                        mp?.start()
+
+                    }
+                    else {
+                        Log.d("deda", "=========================================")
+                        Log.d("deda", "CLICK THIS BUTTON")
+                        Log.d("deda", "START THIS BTN")
+                        Log.d("deda", "BTN ID = ${button}")
+                        Log.d("deda", "BTN ARRAY = $buttonArray")
+
+                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+                        mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
+                        mp?.start()
+                    }
+
+                    mp?.setOnCompletionListener {
+                        mp?.pause()
+                        mp?.reset()
+                        mp?.release()
+                        mp = null
+                        if (buttonArray.size == 1) {
+                            buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+                        } else buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+
+                    }
+
+//                        stopPlaying(button)
+//                        player = MediaPlayer.create(context, getAudioId(card.audioButton))
+//                        player?.start()
                 }
             }
         }
     }
 
-    private fun stopPlaying(button: Button) {
-            if (player != null) {
-                if (player?.isPlaying == true) {
-                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                    player?.stop()
-                    player?.reset()
-                    player?.release()
-                    player = null
-                } else {
-                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-                }
-            }
-
-
-    }
+//    private fun stopPlaying(button: Button) {
+//            if (player != null) {
+//                if (player?.isPlaying == true) {
+//                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//                    player?.stop()
+//                    player?.reset()
+//                    player?.release()
+//                    player = null
+//                } else {
+//                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+//                }
+//            }
+//
+//
+//    }
 
     override fun getItemCount() = cards.size
 

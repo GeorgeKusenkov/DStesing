@@ -72,63 +72,81 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
 //              ВЫНЕСТИ В ОТДЕЛЬНЫЙ КЛАСС. Проигрыватель создает новые потоки, которые я не могу поймать. ПОэтому пришлось вынести всё сюда.
                 val button: Button = holder.itemView.findViewById(R.id.in_lesson_audio_button)
 
+
+
                 button.setOnClickListener {
 
                     if (buttonArray.size >= 2) {
                         buttonArray.removeFirst()
                     }
-
+//                    MediaPlayer.create(context, getAudioId(card.audioButton))
                     buttonArray.add(button)
 
-                    Log.d("deda", "=========================================")
-                    Log.d("deda", "BTN START ARRAY = $buttonArray")
 
+                    // Если:
+                    // 1. Аудио играет
+                    // 2. Нажата текущая кнопка
+                    // 3. Останавливаем аудио, меняем иконку
                     if (mp != null && buttonArray[0] == buttonArray[1]) {
-                        Log.d("deda", "=========================================")
-                        Log.d("deda", "CLICK THIS BUTTON")
-                        Log.d("deda", "STOP THIS BTN1")
-                        Log.d("deda", "BTN ID = ${button}")
-                        Log.d("deda", "BTN ARRAY = $buttonArray")
                         buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                        mp?.stop()
+                        mp?.pause()
+                        Log.d("deda", "PAUSED 2")
+//                        mp?.prepare()
+                        mp?.reset()
                         mp?.release()
                         mp = null
-                        Log.d("deda", "AFTER REMOVE ARRAY = $buttonArray")
 
-                    } else if (mp != null && buttonArray[0] != buttonArray[1]) {
-                        Log.d("deda", "=========================================")
-                        Log.d("deda", "CLICK ANOTHER BUTTON")
-                        Log.d("deda", "STOP ANOTHER BUTTON")
-                        Log.d("deda", "BTN ID = ${button}")
-                        Log.d("deda", "BTN ARRAY = $buttonArray")
+                    // Если:
+                    // 1. Аудио играет
+                    // 2. Нажата другая кнопка
+                    // 3. Меняем иконку у предыдущей кнопки на паузу
+                    // 4. Меняем иконку у текущей кнопки на воспроизведение
+                    }
+                    else if (mp != null && buttonArray[0] != buttonArray[1]) {
+                        Log.d("deda", "================")
+                        Log.d("deda", "MP3 IS ${mp}")
                         buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
                         buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
-                        mp?.stop()
+                        mp?.pause()
+//                        Log.d("deda", "PAUSED3")
+                        mp?.reset()
                         mp?.release()
-                        mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_2)
+                        mp = null
+                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
                         mp?.start()
+                        Log.d("deda", "START3")
 
                     }
+
+                    // Если:
+                    // 1. Аудио не играет
+                    // 2. Нажата другая кнопка
+                    // 3. Меняем иконку у предыдущей кнопки на паузу
+                    // 4. Меняем иконку у текущей кнопки на воспроизведение
+                    //    Иначе иконка поменяется у предыдущей кнопки
                     else if (mp == null && buttonArray.size == 2 && buttonArray[0] != buttonArray[1] ) {
+                        Log.d("deda", "${mp?.isPlaying == false}")
                         buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-                        mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
+                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
                         mp?.start()
+                        Log.d("deda", "START5")
 
                     }
-                    else {
-                        Log.d("deda", "=========================================")
-                        Log.d("deda", "CLICK THIS BUTTON")
-                        Log.d("deda", "START THIS BTN")
-                        Log.d("deda", "BTN ID = ${button}")
-                        Log.d("deda", "BTN ARRAY = $buttonArray")
 
+                    // Если аудио не играет.
+                    // 1. Воспроизводим звук
+                    // 2. Меняем иконку
+                    else {
+                        Log.d("deda", "================")
+                        Log.d("deda", "MP IS ${mp}")
                         buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-                        mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
+                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
                         mp?.start()
+                        Log.d("deda", "START1")
                     }
 
                     mp?.setOnCompletionListener {
-                        mp?.pause()
+//                        mp?.pause()
                         mp?.reset()
                         mp?.release()
                         mp = null
@@ -137,11 +155,13 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
                         } else buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
 
                     }
-
 //                        stopPlaying(button)
 //                        player = MediaPlayer.create(context, getAudioId(card.audioButton))
 //                        player?.start()
                 }
+
+
+
             }
         }
     }

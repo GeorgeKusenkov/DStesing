@@ -18,18 +18,12 @@ import com.example.dstesing.*
 class Module1Lesson1Fragment : Fragment() {
 
     private val args: DetailsFragmentArgs by navArgs()
-    private var mp: MediaPlayer? = null
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = inflater.inflate(R.layout.fragment_module1_lesson1, container, false)
-        val button = binding.findViewById<Button>(R.id.btn_next_level)
-        val button1 = binding.findViewById<Button>(R.id.test_music1)
-        val button2 = binding.findViewById<Button>(R.id.test_music2)
-        val button3 = binding.findViewById<Button>(R.id.test_music3)
 
         val scrollView = binding.findViewById<NestedScrollView>(R.id.fragment_module1_lesson1)
         val position = args.position+1
@@ -39,10 +33,26 @@ class Module1Lesson1Fragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = Adapters(parseLesson(resources,R.xml.basic_module1_lesson1), resources, requireContext())
 
-        val audioArray = arrayListOf(mp)
-        var btnId = 0
-        val idBtn1 = 1
-        val idBtn2 = 2
+
+        Saver(position, scrollView, requireContext()).getPoints()
+        return binding
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //    button3.setOnClickListener {
@@ -61,112 +71,99 @@ class Module1Lesson1Fragment : Fragment() {
 //        Log.d("deda", "ARRAY IS CLEAR")
 //    }
 
-    button1.setOnClickListener {
-
-        if (mp != null && btnId == 1) {
-            Log.d("deda", "=========================================")
-            Log.d("deda", "STOP BTN1")
-            Log.d("deda", "BTN1 ID = $btnId")
-            button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-            mp?.stop()
-            mp?.release()
-            mp = null
-        } else if (mp != null && btnId == 2) {
-            Log.d("deda", "=========================================")
-            Log.d("deda", "CLICK BUTTON1")
-            Log.d("deda", "STOP ANOTHER BUTTON")
-            Log.d("deda", "BTN ID = $btnId")
-            button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-            button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
-            mp?.stop()
-            mp?.release()
-            mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
-            mp?.start()
-            btnId = 1
-        }
-
-
-        else {
-            Log.d("deda", "=========================================")
-            Log.d("deda", "START BTN1")
-            btnId = 1
-            Log.d("deda", "BTN1 ID = $btnId")
-            button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-            mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
-
-//            audioArray.add(mp)
-            mp?.start()
-        }
-
-        mp?.setOnCompletionListener {
-            mp?.pause()
-            mp?.reset()
-            mp?.release()
-//            audioArray.clear()
-            mp = null
-        }
-    }
-
-        button2.setOnClickListener {
-
-            if (mp != null && btnId == 2) {
-                Log.d("deda", "=========================================")
-                Log.d("deda", "STOP BTN2")
-                Log.d("deda", "BTN1 ID = $btnId")
-//                for (array in audioArray) {
-//                    array?.pause()
-//                    array?.reset()
-//                    array?.release()
-//                }
-//                audioArray.clear()
-                button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                mp?.stop()
-                mp?.release()
-                mp = null
-            } else if (mp != null && btnId == 1) {
-                Log.d("deda", "=========================================")
-                Log.d("deda", "CLICK BUTTON2")
-                Log.d("deda", "STOP ANOTHER BUTTON")
-                Log.d("deda", "BTN ID = $btnId")
-                button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
-                mp?.stop()
-                mp?.release()
-                mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_2)
-                mp?.start()
-                btnId = 2
-            } else {
-                Log.d("deda", "=========================================")
-                Log.d("deda", "START BTN2")
-                btnId = 2
-                Log.d("deda", "BTN2 ID = $btnId")
-                button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-                mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_2)
-//                audioArray.add(mp)
-                mp?.start()
-            }
-
-            mp?.setOnCompletionListener {
-                mp?.pause()
-                mp?.reset()
-                mp?.release()
-//                audioArray.clear()
-                mp = null
-            }
-        }
-
-
-        Saver(position, scrollView, requireContext()).getPoints()
-        return binding
-    }
-
-
-
-
-
-
-
-
+//    button1.setOnClickListener {
+//
+//        if (mp != null && btnId == 1) {
+//            Log.d("deda", "=========================================")
+//            Log.d("deda", "STOP BTN1")
+//            Log.d("deda", "BTN1 ID = $btnId")
+//            button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//            mp?.stop()
+//            mp?.release()
+//            mp = null
+//        } else if (mp != null && btnId == 2) {
+//            Log.d("deda", "=========================================")
+//            Log.d("deda", "CLICK BUTTON1")
+//            Log.d("deda", "STOP ANOTHER BUTTON")
+//            Log.d("deda", "BTN ID = $btnId")
+//            button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//            button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
+//            mp?.stop()
+//            mp?.release()
+//            mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
+//            mp?.start()
+//            btnId = 1
+//        }
+//
+//
+//        else {
+//            Log.d("deda", "=========================================")
+//            Log.d("deda", "START BTN1")
+//            btnId = 1
+//            Log.d("deda", "BTN1 ID = $btnId")
+//            button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+//            mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_1)
+//
+////            audioArray.add(mp)
+//            mp?.start()
+//        }
+//
+//        mp?.setOnCompletionListener {
+//            mp?.pause()
+//            mp?.reset()
+//            mp?.release()
+////            audioArray.clear()
+//            mp = null
+//        }
+//    }
+//
+//        button2.setOnClickListener {
+//
+//            if (mp != null && btnId == 2) {
+//                Log.d("deda", "=========================================")
+//                Log.d("deda", "STOP BTN2")
+//                Log.d("deda", "BTN1 ID = $btnId")
+////                for (array in audioArray) {
+////                    array?.pause()
+////                    array?.reset()
+////                    array?.release()
+////                }
+////                audioArray.clear()
+//                button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//                mp?.stop()
+//                mp?.release()
+//                mp = null
+//            } else if (mp != null && btnId == 1) {
+//                Log.d("deda", "=========================================")
+//                Log.d("deda", "CLICK BUTTON2")
+//                Log.d("deda", "STOP ANOTHER BUTTON")
+//                Log.d("deda", "BTN ID = $btnId")
+//                button1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//                button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
+//                mp?.stop()
+//                mp?.release()
+//                mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_2)
+//                mp?.start()
+//                btnId = 2
+//            } else {
+//                Log.d("deda", "=========================================")
+//                Log.d("deda", "START BTN2")
+//                btnId = 2
+//                Log.d("deda", "BTN2 ID = $btnId")
+//                button2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+//                mp = MediaPlayer.create(context, R.raw.audio_c1m1l11_2)
+////                audioArray.add(mp)
+//                mp?.start()
+//            }
+//
+//            mp?.setOnCompletionListener {
+//                mp?.pause()
+//                mp?.reset()
+//                mp?.release()
+////                audioArray.clear()
+//                mp = null
+//            }
+//        }
 
 
 

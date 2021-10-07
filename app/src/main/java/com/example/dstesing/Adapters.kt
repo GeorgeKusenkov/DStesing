@@ -17,9 +17,9 @@ import java.lang.IllegalArgumentException
 
 class Adapters(private val cards: List<Card>, val resources: Resources, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var mp: MediaPlayer? = null
+    var mp: MediaPlayer = MediaPlayer()
     private var buttonArray = mutableListOf<Button>()
-//    var button: Button? = null
+    private var mpArray = mutableListOf<MediaPlayer>()
 
     override fun getItemViewType(position: Int): Int = when(cards[position]) {
         is Card.Tag -> 1
@@ -38,18 +38,18 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return object : RecyclerView.ViewHolder(
             when(viewType) {
-            1 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_tag, parent, false)
-            2 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_text, parent, false)
-            3 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_title, parent, false)
-            4 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_luka_card, parent, false)
-            5 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_vary_card, parent, false)
-            6 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_valy_card, parent, false)
-            7 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_kabikari_card, parent, false)
-            8 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_jarra_card, parent, false)
-            9 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_jack_card, parent, false)
-            10 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_image, parent, false)
-            11 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_audio_button, parent, false)
-            else -> throw IllegalArgumentException("Error")
+                1 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_tag, parent, false)
+                2 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_text, parent, false)
+                3 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_title, parent, false)
+                4 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_luka_card, parent, false)
+                5 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_vary_card, parent, false)
+                6 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_valy_card, parent, false)
+                7 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_kabikari_card, parent, false)
+                8 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_jarra_card, parent, false)
+                9 -> LayoutInflater.from(parent.context).inflate(R.layout.dialog_box_jack_card, parent, false)
+                10 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_image, parent, false)
+                11 -> LayoutInflater.from(parent.context).inflate(R.layout.in_lesson_audio_button, parent, false)
+                else -> throw IllegalArgumentException("Error")
             }) {
         }
     }
@@ -70,95 +70,101 @@ class Adapters(private val cards: List<Card>, val resources: Resources, val cont
             is Card.AudioButton -> {
 
 //              ВЫНЕСТИ В ОТДЕЛЬНЫЙ КЛАСС. Проигрыватель создает новые потоки, которые я не могу поймать. ПОэтому пришлось вынести всё сюда.
-                val button: Button = holder.itemView.findViewById(R.id.in_lesson_audio_button)
-
+                val button = holder.itemView.findViewById<Button>(R.id.in_lesson_audio_button)
 
 
                 button.setOnClickListener {
+                    Log.d("deda", "===========КНОПКА НАЖАТА==========")
+                    Log.d("deda", "ID: $button")
+                    Music(button, context, resources, getAudioId(card.audioButton), mp, buttonArray, mpArray).play()
+//                    StopPlayMusic(button, context, getAudioId(card.audioButton), mp, buttonArray, mpArray)
 
-                    if (buttonArray.size >= 2) {
-                        buttonArray.removeFirst()
-                    }
-//                    MediaPlayer.create(context, getAudioId(card.audioButton))
-                    buttonArray.add(button)
-
-
-                    // Если:
-                    // 1. Аудио играет
-                    // 2. Нажата текущая кнопка
-                    // 3. Останавливаем аудио, меняем иконку
-                    if (mp != null && buttonArray[0] == buttonArray[1]) {
-                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                        mp?.pause()
-                        Log.d("deda", "PAUSED 2")
-//                        mp?.prepare()
-                        mp?.reset()
-                        mp?.release()
-                        mp = null
-
-                    // Если:
-                    // 1. Аудио играет
-                    // 2. Нажата другая кнопка
-                    // 3. Меняем иконку у предыдущей кнопки на паузу
-                    // 4. Меняем иконку у текущей кнопки на воспроизведение
-                    }
-                    else if (mp != null && buttonArray[0] != buttonArray[1]) {
-                        Log.d("deda", "================")
-                        Log.d("deda", "MP3 IS ${mp}")
-                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                        buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
-                        mp?.pause()
-//                        Log.d("deda", "PAUSED3")
-                        mp?.reset()
-                        mp?.release()
-                        mp = null
-                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
-                        mp?.start()
-                        Log.d("deda", "START3")
-
-                    }
-
-                    // Если:
-                    // 1. Аудио не играет
-                    // 2. Нажата другая кнопка
-                    // 3. Меняем иконку у предыдущей кнопки на паузу
-                    // 4. Меняем иконку у текущей кнопки на воспроизведение
-                    //    Иначе иконка поменяется у предыдущей кнопки
-                    else if (mp == null && buttonArray.size == 2 && buttonArray[0] != buttonArray[1] ) {
-                        Log.d("deda", "${mp?.isPlaying == false}")
-                        buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
-                        mp?.start()
-                        Log.d("deda", "START5")
-
-                    }
-
-                    // Если аудио не играет.
-                    // 1. Воспроизводим звук
-                    // 2. Меняем иконку
-                    else {
-                        Log.d("deda", "================")
-                        Log.d("deda", "MP IS ${mp}")
-                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
-                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
-                        mp?.start()
-                        Log.d("deda", "START1")
-                    }
-
-                    mp?.setOnCompletionListener {
-//                        mp?.pause()
-                        mp?.reset()
-                        mp?.release()
-                        mp = null
-                        if (buttonArray.size == 1) {
-                            buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-                        } else buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
-
-                    }
-//                        stopPlaying(button)
-//                        player = MediaPlayer.create(context, getAudioId(card.audioButton))
-//                        player?.start()
                 }
+//                button.setOnClickListener {
+//
+//                    if (buttonArray.size >= 2) {
+//                        buttonArray.removeFirst()
+//                    }
+////                    MediaPlayer.create(context, getAudioId(card.audioButton))
+//                    buttonArray.add(button)
+//
+//
+//                    // Если:
+//                    // 1. Аудио играет
+//                    // 2. Нажата текущая кнопка
+//                    // 3. Останавливаем аудио, меняем иконку
+//                    if (mp != null && buttonArray[0] == buttonArray[1]) {
+//                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//                        mp?.pause()
+//                        Log.d("deda", "PAUSED 2")
+////                        mp?.prepare()
+//                        mp?.reset()
+//                        mp?.release()
+//                        mp = null
+//
+//                    // Если:
+//                    // 1. Аудио играет
+//                    // 2. Нажата другая кнопка
+//                    // 3. Меняем иконку у предыдущей кнопки на паузу
+//                    // 4. Меняем иконку у текущей кнопки на воспроизведение
+//                    }
+//                    else if (mp != null && buttonArray[0] != buttonArray[1]) {
+//                        Log.d("deda", "================")
+//                        Log.d("deda", "MP3 IS ${mp}")
+//                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//                        buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop,0,0,0)
+//                        mp?.pause()
+////                        Log.d("deda", "PAUSED3")
+//                        mp?.reset()
+//                        mp?.release()
+//                        mp = null
+//                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
+//                        mp?.start()
+//                        Log.d("deda", "START3")
+//
+//                    }
+//
+//                    // Если:
+//                    // 1. Аудио не играет
+//                    // 2. Нажата другая кнопка
+//                    // 3. Меняем иконку у предыдущей кнопки на паузу
+//                    // 4. Меняем иконку у текущей кнопки на воспроизведение
+//                    //    Иначе иконка поменяется у предыдущей кнопки
+//                    else if (mp == null && buttonArray.size == 2 && buttonArray[0] != buttonArray[1] ) {
+//                        Log.d("deda", "${mp?.isPlaying == false}")
+//                        buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+//                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
+//                        mp?.start()
+//                        Log.d("deda", "START5")
+//
+//                    }
+//
+//                    // Если аудио не играет.
+//                    // 1. Воспроизводим звук
+//                    // 2. Меняем иконку
+//                    else {
+//                        Log.d("deda", "================")
+//                        Log.d("deda", "MP IS ${mp}")
+//                        buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_stop, 0, 0, 0)
+//                        mp = MediaPlayer.create(context, getAudioId(card.audioButton))
+//                        mp?.start()
+//                        Log.d("deda", "START1")
+//                    }
+//
+//                    mp?.setOnCompletionListener {
+////                        mp?.pause()
+//                        mp?.reset()
+//                        mp?.release()
+//                        mp = null
+//                        if (buttonArray.size == 1) {
+//                            buttonArray[0].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//                        } else buttonArray[1].setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow,0,0,0)
+//
+//                    }
+////                        stopPlaying(button)
+////                        player = MediaPlayer.create(context, getAudioId(card.audioButton))
+////                        player?.start()
+//                }
 
 
 

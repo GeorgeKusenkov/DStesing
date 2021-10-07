@@ -35,28 +35,6 @@
                 android:layout_marginBottom="@dimen/lesson_text_margin"
                 android:orientation="vertical">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ТЕСТ"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:id="@+id/test_music1"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ТЕСТ"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:id="@+id/test_music2"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="СТОП!"
-                    android:drawableLeft="@drawable/ic_baseline_play_arrow"
-                    android:id="@+id/test_music3"/>
-
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/lesson1_list_view"
                     android:layout_width="match_parent"

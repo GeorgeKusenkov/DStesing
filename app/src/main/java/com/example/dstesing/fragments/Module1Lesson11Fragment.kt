@@ -39,5 +39,11 @@ class Module1Lesson11Fragment : Fragment() {
         Saver(position, scrollView, requireContext()).getPoints()
         return binding
     }
+    override fun onPause() {
+        super.onPause()
+        Log.d("BABA", "OnPause")
 
+
+
+    }
 }

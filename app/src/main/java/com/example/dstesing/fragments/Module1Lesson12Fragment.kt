@@ -39,4 +39,12 @@ class Module1Lesson12Fragment : Fragment() {
         return binding
     }
 
+    override fun onPause() {
+        super.onPause()
+        val mediaPlayer = Adapters.MediaPlayerSingleton.m
+        if (mediaPlayer?.isPlaying == true) {
+            mediaPlayer.stop()
+        }
+    }
+
 }

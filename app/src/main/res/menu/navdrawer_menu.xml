@@ -6,12 +6,21 @@
         android:title="Главная" />
 
     <item
+        android:id="@+id/avatarMenu"
+        android:title="Персонаж" />
+
+    <item
+        android:id="@+id/settingsMenu"
+        android:title="Настройки" />
+
+    <item
+        android:id="@+id/aboutApp"
+        android:title="О приложении" />
+
+    <item
         android:id="@+id/lessonsModule1Fragment"
-        android:title="Lessons 1" />
-    <item
-        android:id="@+id/lessonsModule2Fragment"
-        android:title="Lessons 2" />
-    <item
-        android:id="@+id/moduleFragment"
-        android:title="Module List" />
+        android:title="Связаться с нами" />
+
+
 </menu>
+

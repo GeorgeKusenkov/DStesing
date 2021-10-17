@@ -46,7 +46,7 @@
             android:fontFamily="@font/montserrat_regular"
             android:text="This is description module one."
             android:textColor="#7D3F3F"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginStart="15dp"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toStartOf="@+id/module_image"
@@ -71,6 +71,7 @@
             android:fontFamily="@font/montserrat_bold"
             android:text="Перейти к урокам"
             android:textColor="#FF834E"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/module_description" />
 

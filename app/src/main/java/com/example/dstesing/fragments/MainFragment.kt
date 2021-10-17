@@ -28,7 +28,6 @@ class MainFragment : Fragment(), OnCourseClickListener {
     ): View? {
         val binding = inflater.inflate(R.layout.fragment_main,container,false)
 
-        val button = binding.findViewById<Button>(R.id.button)
         val userName  = binding.findViewById<TextView>(R.id.userName)
         val userExperience = binding.findViewById<TextView>(R.id.experience_main)
         val userLevel = binding.findViewById<TextView>(R.id.user_level)
@@ -66,10 +65,6 @@ class MainFragment : Fragment(), OnCourseClickListener {
         recyclerView.layoutManager = layoutManager
         cardAdapter = RecyclerViewCourseAdapter(this)
         recyclerView.adapter = cardAdapter
-
-        button.setOnClickListener{view: View ->
-            view.findNavController().navigate(R.id.action_mainFragment_to_moduleFragment)
-        }
 
         return binding
     }

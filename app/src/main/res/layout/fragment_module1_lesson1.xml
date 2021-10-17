@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,8 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.Module1Lesson1Fragment"
-    android:id="@+id/fragment_module1_lesson1">
-
+    android:id="@+id/fragment_module1_lesson1"
+    android:background="@drawable/background_gradient"
+    app:layout_scrollFlags="scroll|snap">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,7 +40,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/lesson1_list_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"/>
 
                 <Button
                     android:id="@+id/btn_next_level"

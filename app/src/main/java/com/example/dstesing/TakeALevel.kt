@@ -14,7 +14,7 @@ class TakeALevel(val context: Context) {
 
         if (userXp != null) {
             if (userXp > LevelGradation.LEVEL_0.xp) {
-                lessons[0].images = R.drawable.elephant
+                lessons[0].images = R.drawable.basic_module_1_lesson1
             }
 
             if (userXp >= LevelGradation.LEVEL_1.xp) {

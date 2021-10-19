@@ -357,6 +357,6 @@
     <fragment
         android:id="@+id/settingsMenu"
         android:name="com.example.dstesing.fragments.SettingsMenu"
-        android:label="fragment_settings_menu"
+        android:label="Настройки"
         tools:layout="@layout/fragment_settings_menu" />
 </navigation>

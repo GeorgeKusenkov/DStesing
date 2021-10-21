@@ -29,8 +29,7 @@
                 android:background="@drawable/main_dialog_box"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/lesson_text_margin"
-                android:layout_marginRight="@dimen/lesson_text_margin"
+
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:layout_marginBottom="@dimen/lesson_text_margin"

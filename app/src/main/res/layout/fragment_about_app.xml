@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AboutAppFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Приложение"
+        android:textSize="30sp"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Привет! Didgeridoo Trip - это приложение для обучения игре на диджериду в формате историй с ролевыми элементами. "
+        android:textSize="17sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Главная задача - сделать обучение интересным и максимально продуктивным. \n\n- Занимайся где угодно и когда угодно!\n- Более 500 ритмов с аудиопримерами!\n- Полностью продуманные истории, основанные на реальных фактах, событиях и мифах австралийских аборигенов\n- Много дополнительной информации!"
+        android:textSize="17sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Обучение"
+        android:textSize="30sp"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Обучение построено в виде курсов, поделенных на модули. В совокупности они представляют из себя индивидуальные истории. А если ты не хочешь проходить историю, - можно выбрать эекспресс вариант данного курса."
+        android:textSize="17sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Персонаж"
+        android:textSize="30sp"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Главный герой - Лука. Он не знает как попал на Австралийский континент и пытается это выяснить. В этом ему помогут друзья. Приобретая больше навыков игры, он в итоге узнает истину. Помогите ему в этом."
+        android:textSize="17sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"/>
+</LinearLayout>
+
+</ScrollView>

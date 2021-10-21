@@ -1,6 +1,7 @@
 package com.example.dstesing.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +42,10 @@ class Module1Lesson12Fragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
+
+        Log.d("BABA", "=======OnPause====== Lesson12")
+        Log.d("BABA", "FRAGMENT on pause Mediaplayer1 is: ${Adapters.MediaPlayerSingleton.m}")
+
         val mediaPlayer = Adapters.MediaPlayerSingleton.m
         if (mediaPlayer?.isPlaying == true) {
             mediaPlayer.stop()

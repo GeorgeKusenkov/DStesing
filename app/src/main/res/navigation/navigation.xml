@@ -355,8 +355,23 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/settingsMenu"
+        android:id="@+id/settingsMenuFragment"
         android:name="com.example.dstesing.fragments.SettingsMenu"
         android:label="Настройки"
         tools:layout="@layout/fragment_settings_menu" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.example.dstesing.fragments.AboutAppFragment"
+        android:label="О приложении"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/avatarMenuFragment"
+        android:name="com.example.dstesing.fragments.AvatarMenuFragment"
+        android:label="Персонаж"
+        tools:layout="@layout/fragment_avatar_menu" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.example.dstesing.fragments.ContactUsFragment"
+        android:label="Свяжитесь с нами"
+        tools:layout="@layout/fragment_contact_us" />
 </navigation>

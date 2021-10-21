@@ -44,19 +44,17 @@ class Module1Lesson11Fragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        Log.d("BABA", "=======OnPause======")
+        Log.d("BABA", "=======OnPause====== Lesson11")
         Log.d("BABA", "FRAGMENT on pause Mediaplayer1 is: ${Adapters.MediaPlayerSingleton.m}")
 
         val mediaPlayer = Adapters.MediaPlayerSingleton.m
+        Log.d("BABA", "mediaPlayer is good")
+        if(mediaPlayer?.isPlaying == true) {
+            Log.d("BABA", "FRAGMENT on pause Mediaplayer2 is: $mediaPlayer")
+            Log.d("BABA", "FRAGMENT MEDIA PLAY?: ${mediaPlayer.isPlaying}")
+            Log.d("BABA", "FRAGMENT on pause Mediaplayer3 is: ${Adapters.MediaPlayerSingleton.m}")
+            mediaPlayer.stop()
+        }
 
-        Log.d("BABA", "FRAGMENT on pause Mediaplayer2 is: $mediaPlayer")
-
-        Log.d("BABA", "FRAGMENT MEDIA PLAY?: ${mediaPlayer?.isPlaying}")
-
-        mediaPlayer?.pause()
-        mediaPlayer?.reset()
-        mediaPlayer?.release()
-
-        Log.d("BABA", "FRAGMENT on pause Mediaplayer3 is: ${Adapters.MediaPlayerSingleton.m}")
     }
 }

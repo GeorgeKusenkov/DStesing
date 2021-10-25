@@ -38,7 +38,7 @@ class Module1Lesson11Fragment : Fragment() {
                     findNavController().navigate(action)
         }
         Log.d("BABA", "FRAGMENT Mediaplayer is: ${Adapters.MediaPlayerSingleton.m}")
-        Saver(position, scrollView, requireContext()).getPoints()
+        Saver(position, scrollView, requireContext(),1).getPoints()
         return binding
     }
 

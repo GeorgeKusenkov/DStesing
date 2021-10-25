@@ -114,6 +114,10 @@
         <argument
             android:name="ID"
             app:argType="string" />
+        <action
+            android:id="@+id/action_lessonsModule2Fragment_to_module2Lesson1Fragment"
+            app:destination="@id/module2Lesson1Fragment"
+            app:popUpTo="@id/lessonsModule2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -374,4 +378,25 @@
         android:name="com.example.dstesing.fragments.ContactUsFragment"
         android:label="Свяжитесь с нами"
         tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/module2Lesson1Fragment"
+        android:name="com.example.dstesing.fragments.Module2Lesson1Fragment"
+        android:label="Школа Диджериду"
+        tools:layout="@layout/fragment_module2_lesson1">
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_module2Lesson1Fragment_to_module2Lesson2Fragment"
+            app:destination="@id/module2Lesson2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/module2Lesson2Fragment"
+        android:name="com.example.dstesing.fragments.Module2Lesson2Fragment"
+        android:label="Школа Диджериду"
+        tools:layout="@layout/fragment_module2_lesson2">
+        <argument
+            android:name="POSITION"
+            app:argType="integer" />
+    </fragment>
 </navigation>

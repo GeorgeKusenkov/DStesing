@@ -1,5 +1,6 @@
 package com.example.dstesing.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,7 @@ class RecyclerViewModule1Adapter (private val lessonClickListener: OnLessonClick
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.lesson_card, parent, false)
-        TakeALevel(parent.context).changeImage(lessons)
+        TakeALevel(parent.context, lessons[0].id).changeImage(lessons)
         return ViewHolder(v)
     }
 

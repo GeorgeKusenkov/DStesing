@@ -12,7 +12,7 @@ class RecyclerViewModule2Adapter (private val lessonClickListener: OnLessonClick
 
     private val lessons = DataStorage.getLessonsModule2List()
 
-    inner class ViewHolder(itemView: View) :  RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemTitle: TextView = itemView.findViewById(R.id.lesson_title)
         val itemDetails: TextView = itemView.findViewById(R.id.lesson_description)
         val itemImage: ImageView = itemView.findViewById(R.id.lesson_image)
@@ -26,12 +26,13 @@ class RecyclerViewModule2Adapter (private val lessonClickListener: OnLessonClick
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.lesson_card, parent, false)
+        TakeALevel(parent.context, lessons[0].id).changeImage(lessons)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemImage.setImageResource(lessons[position].images)
-        holder.itemTitle.text = lessons[position].title.toString()
+        holder.itemTitle.setText(lessons[position].title)
         holder.itemDetails.setText(lessons[position].details)
 
         val id = lessons[position].id

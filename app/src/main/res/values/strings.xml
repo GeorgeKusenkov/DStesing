@@ -12,6 +12,7 @@
 
     <!--Модули-->
     <string name="module1">Модуль 1</string>
+    <string name="module2">Модуль 2</string>
 
     <!--Уроки-->
     <string name="lesson1">Урок 1</string>
@@ -35,6 +36,10 @@
     <string name="lesson19">Урок 19</string>
     <string name="lesson20">Урок 20</string>
 
+    <string name="module2_lesson1_title">С чистого листа</string>
+    <string name="module2_lesson2_title">Медитирующие согласные</string>
+    <string name="module2_lesson3_title">Ритмы Новичка</string>
+    <string name="module2_lesson4_title">Соединяем слоги</string>
 
     <!--Базовый курс, модуль №1, урок №1-->
     <string name="lesson1_title">Вступление</string>

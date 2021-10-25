@@ -5,11 +5,11 @@ import android.widget.ScrollView
 import android.widget.Toast
 import androidx.core.widget.NestedScrollView
 
-class Saver (var position: Int, var scrollView: NestedScrollView, var context: Context) {
+class Saver (var position: Int, var scrollView: NestedScrollView, var context: Context, val id: Int) {
 
     private var shared = context.getSharedPreferences("SETTINGS", Context.MODE_PRIVATE)
     private var xp = shared?.getInt("user_experience", 0)!!
-    private var checkXP = shared?.getBoolean("CHECK_XP_M1L$position", false)!!
+    private var checkXP = shared?.getBoolean("CHECK_XP_M${id}L$position", false)!!
     private var counter = shared?.getInt("LESSON_COUNTER", 0)!!
 
     private fun saveData() {

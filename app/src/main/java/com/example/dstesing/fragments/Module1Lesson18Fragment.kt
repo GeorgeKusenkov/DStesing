@@ -39,7 +39,7 @@ class Module1Lesson18Fragment : Fragment() {
             }
         } catch (e: Exception) {Toast.makeText(context, "Ошибка: $e", Toast.LENGTH_SHORT).show()}
 
-        Saver(position, scrollView, requireContext()).getPoints()
+        Saver(position, scrollView, requireContext(),1).getPoints()
         return binding
     }
 

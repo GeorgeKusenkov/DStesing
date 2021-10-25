@@ -35,7 +35,7 @@ class Module1Lesson4Fragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        Saver(position, scrollView, requireContext()).getPoints()
+        Saver(position, scrollView, requireContext(), 1).getPoints()
         return binding
     }
 

@@ -64,9 +64,17 @@ object DataStorage {
     //Basic course module 2 lessons
     fun getLessonsModule2List(): Array<Lesson> {
         return arrayOf(
-            Lesson(R.string.lesson1, R.string.lesson1_title,R.drawable.coala2,"M2L-"),
-            Lesson(R.string.lesson2, R.string.lesson1_title,R.drawable.coala2,"M2L-"),
-            Lesson(R.string.lesson3, R.string.lesson1_title,R.drawable.coala2,"M2L-")
+            Lesson(R.string.lesson1, R.string.module2_lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson2, R.string.module2_lesson2_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson3, R.string.module2_lesson3_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson4, R.string.module2_lesson4_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson5, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson6, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson7, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson8, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson9, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson10, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-"),
+            Lesson(R.string.lesson11, R.string.lesson1_title,R.drawable.ic_lesson_lock,"M2L-")
         )
     }
 }

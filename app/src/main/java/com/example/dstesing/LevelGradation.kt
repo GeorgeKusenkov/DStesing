@@ -20,5 +20,21 @@ enum class LevelGradation (val xp: Int){
     LEVEL_16(1600),
     LEVEL_17(1700),
     LEVEL_18(1800),
-    LEVEL_19(1900)
+    LEVEL_19(1900),
+    LEVEL_20(2000),
+    LEVEL_21(2100),
+    LEVEL_22(2200),
+    LEVEL_23(2300),
+    LEVEL_24(2400),
+    LEVEL_25(2500),
+    LEVEL_26(2600),
+    LEVEL_27(2700),
+    LEVEL_28(2800),
+    LEVEL_29(2900),
+    LEVEL_30(3000),
+    LEVEL_31(3100),
+    LEVEL_32(3200),
+    LEVEL_33(3300),
+    LEVEL_34(3400),
+    LEVEL_35(3500)
 }

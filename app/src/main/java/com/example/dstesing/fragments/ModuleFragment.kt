@@ -39,7 +39,7 @@ class ModuleFragment : Fragment(), OnCardClickListener {
     override fun cardClick(module: Module, position: Int) {
         when(position) {
             0 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule1Fragment)
-            1 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
+            1 -> findNavController().navigate(R.id.action_moduleFragment_to_LessonsModule2Fragment)
             2 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
             3 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()
             4 -> Toast.makeText(context, "Это модуль пока что недоступен", Toast.LENGTH_SHORT).show()

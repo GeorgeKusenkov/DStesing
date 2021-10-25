@@ -19,13 +19,14 @@
             android:text="@string/module1"
             android:textSize="45sp"
             android:textColor="#FFFFFF"
-            android:textFontWeight="700"/>
+            android:textFontWeight="700"
+            android:layout_marginTop="20dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/module1_lessons_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="100dp"
             app:layoutManager="LinearLayoutManager"
             tools:listitem="@layout/lesson_card" />
     </FrameLayout>
